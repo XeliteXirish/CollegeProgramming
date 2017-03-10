@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1487584471 source:x:\programming 1\lab4\question 5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1487584541 source:f:\onedrive\development\c\lab4\question 5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
