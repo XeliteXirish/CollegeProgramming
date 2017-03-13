@@ -1,9 +1,5 @@
 # depslib dependency file v1.0
-1488370690 source:c:\users\shaun\onedrive\development\c\lab 5\question 5\main.c
-	<stdio.h>
-	<stdlib.h>
-
-1488791923 source:x:\programming 1\lab 5\question 5\main.c
+1489397045 source:x:\programming 1\lab 5\question 5\main.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>

@@ -1,3 +1,19 @@
+/*Calculates the property value */
+
+/* ------------------------------------------------------------
+
+Program: main.c
+
+Programmer: Shaun O'Neill
+
+ID: B00098451
+
+Date: 13 March 201
+
+Purpose: Calculates the property value
+
+------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,19 +26,28 @@ int main()
 
     scanf("%f", &x);
 
-    if(x <= 100000){
+    if(x <= 100000)
+    {
         printf("Stamp duty: 2%\n\n");
 
-    }else if (x > 100000 && x < 150000){
+    }
+    else if (x > 100000 && x < 150000)
+    {
         printf("Stamp duty: 5%\n\n");
 
-    }else if (x >= 150000 && x < 200000){
+    }
+    else if (x >= 150000 && x < 200000)
+    {
         printf("Stamp duty: 7%\n\n");
 
-    }else if (x >= 200000 && x < 250000){
+    }
+    else if (x >= 200000 && x < 250000)
+    {
         printf("Stamp duty: 10%\n\n");
 
-    }else if (x >= 250000){
+    }
+    else if (x >= 250000)
+    {
         printf("Stamp duty: 12.5%\n\n");
     }
     printf("----------------------------------------\n");

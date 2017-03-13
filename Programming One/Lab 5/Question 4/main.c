@@ -1,3 +1,19 @@
+/*Retuns the grade you got from a percentage */
+
+/* ------------------------------------------------------------
+
+Program: main.c
+
+Programmer: Shaun O'Neill
+
+ID: B00098451
+
+Date: 13 March 201
+
+Purpose: Retuns the grade you got from a percentage
+
+------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

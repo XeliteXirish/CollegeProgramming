@@ -1,3 +1,19 @@
+/*Preforms some maths calculaions on some numbers */
+
+/* ------------------------------------------------------------
+
+Program: main.c
+
+Programmer: Shaun O'Neill
+
+ID: B00098451
+
+Date: 13 March 201
+
+Purpose: Preforms some maths calculaions on some numbers
+
+------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include<math.h>
@@ -61,7 +77,8 @@ int calculateStandardDev(double data[])
     return sqrt(standardDeviation/10);
 }
 
-int calculateUpperCL(double data[]){
+int calculateUpperCL(double data[])
+{
 
     double mean = calculateMean(data);
     double sd = calculateStandardDev(data);
@@ -69,7 +86,8 @@ int calculateUpperCL(double data[]){
     return sd * (mean + 3);
 }
 
-int calculateLowerCL(double data[]){
+int calculateLowerCL(double data[])
+{
 
     double mean = calculateMean(data);
     double sd = calculateStandardDev(data);

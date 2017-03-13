@@ -1,3 +1,19 @@
+/*Calculates the angle of a triangle given two sides */
+
+/* ------------------------------------------------------------
+
+Program: main.c
+
+Programmer: Shaun O'Neill
+
+ID: B00098451
+
+Date: 13 March 201
+
+Purpose: Calculates the angle of a triangle given two sides
+
+------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

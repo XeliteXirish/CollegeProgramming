@@ -1,3 +1,19 @@
+/*Displays a box of a given number */
+
+/* ------------------------------------------------------------
+
+Program: main.c
+
+Programmer: Shaun O'Neill
+
+ID: B00098451
+
+Date: 13 March 201
+
+Purpose: Displays a box of a given number
+
+------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
