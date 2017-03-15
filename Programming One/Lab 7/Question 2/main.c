@@ -22,7 +22,7 @@ int main()
         printf("Name: ");
         for(y = 0; y < ARRAY_SIZE(name); y++)
         {
-            if(name[y] != 0)
+            if(name[y] != '\0')
             {
                 printf("%c", name[y]);
             }
