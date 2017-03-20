@@ -8,7 +8,7 @@ double getGradePointValue(int grade);
 void calculateGpas(int studentGrades[][12]);
 void outputGpas(double studentGpas[]);
 int totalCredits();
-void outputClassification(double gpa);
+char * outputClassification(double gpa);
 void outputResultsFile(double studentGpas[]);
 
 int studentGrades[10][12] = {};
@@ -46,117 +46,163 @@ void loadIntoArray()
     fclose(data);
 }
 
-double getGradePointValue(int grade){
+double getGradePointValue(int grade)
+{
 
-    if(grade > 80){
+    if(grade > 80)
+    {
         return 4.00 * 5;
-    }else if(grade > 70 && grade < 80){
+    }
+    else if(grade > 70 && grade < 80)
+    {
         return 3.50 * 5;
-    }else if(grade > 60 && grade < 70){
+    }
+    else if(grade > 60 && grade < 70)
+    {
         return 3.00 * 5;
-    }else if(grade > 55 && grade < 60){
+    }
+    else if(grade > 55 && grade < 60)
+    {
         return 2.75 * 5;
-    }else if(grade > 50 && grade < 55){
+    }
+    else if(grade > 50 && grade < 55)
+    {
         return 2.50 * 5;
-    }else if(grade > 40 && grade < 50){
+    }
+    else if(grade > 40 && grade < 50)
+    {
         return 2.00 * 5;
-    }else if(grade > 35 && grade < 40){
+    }
+    else if(grade > 35 && grade < 40)
+    {
         return 1.50 * 5;
-    }else{
+    }
+    else
+    {
         return 0;
     }
 }
 
-int totalCredits(){
+int totalCredits()
+{
     return 5 * 12;
 }
 
-void calculateGpas(int studentGrades[][12]){
+void calculateGpas(int studentGrades[][12])
+{
 
     int x, y;
 
-    for(x = 0; x < 10; x++){
+    for(x = 0; x < 10; x++)
+    {
         double gpa = 0;
 
-        for(y = 0; y < 12; y++){
+        for(y = 0; y < 12; y++)
+        {
             gpa += getGradePointValue(studentGrades[x][y]);
         }
         studentGpas[x] = gpa / totalCredits();
     }
 }
 
-void outputGpas(double studentGpas[]){
+void outputGpas(double studentGpas[])
+{
 
     int x, y, counter = 0;
     printf("\nGPA results for all 10 students:\n\n");
 
-    for (x = 0; x < 5; x++){
+    for (x = 0; x < 5; x++)
+    {
         int start = x * 2;
         printf("\t");
 
-        for (y = 0; y < 2; y++){
+        for (y = 0; y < 2; y++)
+        {
             printf("[Student %d]\t\t\t\t", counter + 1);
             counter++;
         }
 
-        for (y = 0; y < 2; y++){
+        for (y = 0; y < 2; y++)
+        {
             printf("GPA: %.2lf\t\t\t\t", studentGpas[start + y]);
         }
 
-        for (y = 1; y <= 2; y++){
-            outputClassification(studentGpas[start + y]);
+        for (y = 1; y <= 2; y++)
+        {
+            printf("%s", outputClassification(studentGpas[start + y]));
         }
         printf("\n\n");
 
     }
 }
 
-void outputClassification(double gpa){
+char * outputClassification(double gpa)
+{
 
-    if (gpa > 3.25){
-        printf("First class Honours\t\t\t");
+    char *x ;
+    if (gpa > 3.25)
+    {
+        x = "First class Honours\t\t\t";
 
-    }else if (gpa > 3.00 && gpa < 3.25){
-        printf("Second class Honours, grade 1\t\t");
-
-    }else if (gpa > 2.50 && gpa < 3.00){
-        printf("Second class Honours, grade 2\t\t");
-
-    }else if (gpa > 2 && gpa < 2.50){
-        printf("Pass\t\t\t\t\t");
-    }else{
-        printf("Fail\t\t\t\t\t");
     }
+    else if (gpa > 3.00 && gpa < 3.25)
+    {
+        x = "Second class Honours, grade 1\t\t";
+
+    }
+    else if (gpa > 2.50 && gpa < 3.00)
+    {
+        x = "Second class Honours, grade 2\t\t";
+
+    }
+    else if (gpa > 2 && gpa < 2.50)
+    {
+        x = "Pass\t\t\t\t\t";
+
+    }
+    else
+    {
+        x ="Fail\t\t\t\t\t";
+    }
+    //printf("%s", x);
+    return x;
 }
 
-void outputResultsFile(double studentGpas[]){
+void outputResultsFile(double studentGpas[])
+{
     FILE *results = fopen("results.txt", "w+");
 
     int x, y, counter = 0;
     fprintf(results, "\nGPA results for all 10 students:\n\n");
 
-    for (x = 0; x < 5; x++){
+    for (x = 0; x < 5; x++)
+    {
         int start = x * 2;
         fprintf(results, "\t");
 
-        for (y = 0; y < 2; y++){
+        for (y = 0; y < 2; y++)
+        {
             fprintf(results, "[Student %d]\t\t\t\t", counter + 1);
             counter++;
         }
 
         fprintf(results, "\n\t");
 
-        for (y = 0; y < 2; y++){
+        for (y = 0; y < 2; y++)
+        {
             fprintf(results, "GPA: %.2lf\t\t\t\t", studentGpas[start + y]);
         }
 
-        for (y = 1; y <= 2; y++){
-            //outputClassification(studentGpas[start + y]);
+        fprintf(results, "\n\t");
+
+        for (y = 1; y <= 2; y++)
+        {
+            fprintf(results, "%s\t", outputClassification(studentGpas[start + y]));
         }
         fprintf(results, "\n\n");
     }
-        fclose(results);
-        printf("\n\t\t[Results have been logged to results.txt!]\n");
+    fclose(results);
+    printf("\n\t\t[Results have been logged to results.txt!]\n");
 }
 
 
