@@ -11,7 +11,7 @@ int main()
     printf("Please enter your name: ");
     scanf("%s", &name);
 
-    for (x = 0; x <= rand() % 20; x++){
+    for (x = 1; x <= rand() % 20; x++){
         printf("Output %d: %s\n", x, name);
     }
 
