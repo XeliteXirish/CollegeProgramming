@@ -9,6 +9,7 @@ void calculateGpas(int studentGrades[][12]);
 void outputGpas(double studentGpas[]);
 int totalCredits();
 void outputClassification(double gpa);
+void outputResultsFile(double studentGpas[]);
 
 int studentGrades[10][12] = {};
 double studentGpas[10] = {};
@@ -18,6 +19,7 @@ int main()
     loadIntoArray();
     calculateGpas(studentGrades);
     outputGpas(studentGpas);
+    outputResultsFile(studentGpas);
 
     return 0;
 }
@@ -85,32 +87,76 @@ void calculateGpas(int studentGrades[][12]){
 
 void outputGpas(double studentGpas[]){
 
-    int x;
+    int x, y, counter = 0;
+    printf("\nGPA results for all 10 students:\n\n");
 
-    for(x = 0; x < 10; x++){
-        printf("Student %d\n", x +1);
-        printf("\t[GPA VALUE: %.2lf]\n", studentGpas[x]);
+    for (x = 0; x < 5; x++){
+        int start = x * 2;
+        printf("\t");
 
-        outputClassification(studentGpas[x]);
+        for (y = 0; y < 2; y++){
+            printf("[Student %d]\t\t\t\t", counter + 1);
+            counter++;
+        }
+
+        for (y = 0; y < 2; y++){
+            printf("GPA: %.2lf\t\t\t\t", studentGpas[start + y]);
+        }
+
+        for (y = 1; y <= 2; y++){
+            outputClassification(studentGpas[start + y]);
+        }
         printf("\n\n");
+
     }
 }
 
-
-
 void outputClassification(double gpa){
+
     if (gpa > 3.25){
-        printf("\nDegree Classification: First class Honours\n");
+        printf("First class Honours\t\t\t");
 
     }else if (gpa > 3.00 && gpa < 3.25){
-        printf("\nDegree Classification: Second class Honours, grade 1\n");
+        printf("Second class Honours, grade 1\t\t");
 
     }else if (gpa > 2.50 && gpa < 3.00){
-        printf("\nDegree Classification: Second class Honours, grade 2\n");
+        printf("Second class Honours, grade 2\t\t");
 
     }else if (gpa > 2 && gpa < 2.50){
-        printf("\nDegree Classification: Pass\n");
+        printf("Pass\t\t\t\t\t");
+    }else{
+        printf("Fail\t\t\t\t\t");
     }
+}
+
+void outputResultsFile(double studentGpas[]){
+    FILE *results = fopen("results.txt", "w+");
+
+    int x, y, counter = 0;
+    fprintf(results, "\nGPA results for all 10 students:\n\n");
+
+    for (x = 0; x < 5; x++){
+        int start = x * 2;
+        fprintf(results, "\t");
+
+        for (y = 0; y < 2; y++){
+            fprintf(results, "[Student %d]\t\t\t\t", counter + 1);
+            counter++;
+        }
+
+        fprintf(results, "\n\t");
+
+        for (y = 0; y < 2; y++){
+            fprintf(results, "GPA: %.2lf\t\t\t\t", studentGpas[start + y]);
+        }
+
+        for (y = 1; y <= 2; y++){
+            //outputClassification(studentGpas[start + y]);
+        }
+        fprintf(results, "\n\n");
+    }
+        fclose(results);
+        printf("\n\t\t[Results have been logged to results.txt!]\n");
 }
 
 

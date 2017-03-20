@@ -1,0 +1,18 @@
+
+GPA results for all 10 students:
+
+	[Student 1]				[Student 2]				
+	GPA: 2.25				GPA: 2.42				
+
+	[Student 3]				[Student 4]				
+	GPA: 1.90				GPA: 2.35				
+
+	[Student 5]				[Student 6]				
+	GPA: 1.92				GPA: 2.00				
+
+	[Student 7]				[Student 8]				
+	GPA: 1.79				GPA: 2.60				
+
+	[Student 9]				[Student 10]				
+	GPA: 1.96				GPA: 3.40				
+
