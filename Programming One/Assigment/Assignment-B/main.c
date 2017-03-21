@@ -3,6 +3,9 @@
 
 #define CREDITS 5
 
+void promptSampleSize();
+void validateData();
+void randomiseDataFile();
 void loadIntoArray();
 double getGradePointValue(int grade);
 void calculateGpas(int studentGrades[][12]);
@@ -14,8 +17,14 @@ void outputResultsFile(double studentGpas[]);
 int studentGrades[10][12] = {};
 double studentGpas[10] = {};
 
+int sampleSize = 0, columns = 0;
+rows = 0;
+
 int main()
 {
+    promptSampleSize();
+    validateData();
+    randomiseDataFile();
     loadIntoArray();
     calculateGpas(studentGrades);
     outputGpas(studentGpas);
@@ -24,9 +33,52 @@ int main()
     return 0;
 }
 
-void loadIntoArray()
+void promptSampleSize()
 {
 
+    printf("Please enter a number between 80 and 120: ");
+    scanf("%d", &sampleSize);
+}
+
+void validateData()
+{
+// Validates the data to make sure its between 80 and 120
+    if (!sampleSize > 80 && !sampleSize < 120)
+    {
+        printf("Please enter a number only between 80 and 120. Try again.\n");
+        promptSampleSize();
+        return;
+    }
+}
+
+void randomiseDataFile()
+{
+
+    int x, y, counter = 0;
+    FILE* data = fopen("data.txt", "w");
+    srand(time(NULL));
+
+    for (x = 0; x < 10; x++)
+    {
+        for (y = 0; y < 12; y++)
+        {
+            if(counter < sampleSize)
+            {
+                fprintf(data, "%d\t\t", 1 + rand() % 100);
+            }
+            else
+            {
+                break;
+            }
+
+            counter++;
+        }
+        fprintf(data, "\n");
+    }
+}
+
+void loadIntoArray()
+{
     FILE* data = fopen("data.txt", "r");
 
     int number = 0, student = 0, counter = 0;
@@ -42,6 +94,7 @@ void loadIntoArray()
             counter = 0;
         }
         counter++;
+        printf("%d", number);
     }
     fclose(data);
 }
