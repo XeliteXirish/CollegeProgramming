@@ -1,3 +1,19 @@
+/*Prints your name with different methods */
+
+/* ------------------------------------------------------------
+
+Program: main.c
+
+Programmer: Shaun O'Neill
+
+ID: B00098451
+
+Date: 27 March 2017
+
+Purpose: Prints your name with different methods
+
+------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

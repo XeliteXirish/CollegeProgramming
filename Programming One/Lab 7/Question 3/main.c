@@ -1,3 +1,19 @@
+/*Preforms some maths using arrays */
+
+/* ------------------------------------------------------------
+
+Program: main.c
+
+Programmer: Shaun O'Neill
+
+ID: B00098451
+
+Date: 27 March 2017
+
+Purpose: Preforms some maths using arrays
+
+------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
