@@ -34,7 +34,7 @@ void loadIntoArray()
 
     int number = 0, student = 0, counter = 0;
 
-    while( fscanf(data, "%d", &number) > 0 ) // parse %d followed by ','
+    while( fscanf(data, "%d", &number) > 0 )
     {
         studentGrades[student][counter] = number;
 
