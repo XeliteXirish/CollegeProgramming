@@ -64,7 +64,7 @@ void randomiseDataFile()
         {
             if(counter < sampleSize)
             {
-                fprintf(data, "%d", 1 + rand() % 100);
+                fprintf(data, "%d	", 1 + rand() % 100);
             }
             else
             {
@@ -75,17 +75,17 @@ void randomiseDataFile()
         }
         fprintf(data, "\n");
     }
+    fclose(data);
 }
 
 void loadIntoArray()
 {
     FILE* data = fopen("data.txt", "r");
 
-    int student = 0, counter = 0;
-    double number = 0;
+    int student = 0, counter = 0, number = 0;
 
     printf("Scanning file");
-    while( fscanf(data, "%lf", &number) > 0 ) // parse %d followed by ','
+    while( fscanf(data, "%d", &number) > 0 )
     {
         printf("Number %d\n", number);
         studentGrades[student][counter] = number;
@@ -97,7 +97,6 @@ void loadIntoArray()
             counter = 0;
         }
         counter++;
-        printf("%d", number);
     }
     fclose(data);
 }
