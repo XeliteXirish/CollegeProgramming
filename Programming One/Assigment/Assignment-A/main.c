@@ -116,6 +116,41 @@ void calculateGpas(int studentGrades[][12])
 }
 
 /**
+This returns the degree classification for a given gpa
+**/
+char * outputClassification(double gpa)
+{
+
+    char *x ;
+    if (gpa >= 3.25)
+    {
+        x = "First class Honours\t\t\t";
+
+    }
+    else if (gpa >= 3.00 && gpa < 3.25)
+    {
+        x = "Second class Honours, grade 1\t\t";
+
+    }
+    else if (gpa >= 2.50 && gpa < 3.00)
+    {
+        x = "Second class Honours, grade 2\t\t";
+
+    }
+    else if (gpa >= 2 && gpa < 2.50)
+    {
+        x = "Pass\t\t\t\t\t";
+
+    }
+    else
+    {
+        x ="Fail\t\t\t\t\t";
+    }
+    //printf("%s", x);
+    return x;
+}
+
+/**
 Outputs the gpas for each student to the console window in a nice format
 **/
 void outputGpas(double studentGpas[])
@@ -151,41 +186,6 @@ void outputGpas(double studentGpas[])
         printf("\n\n");
 
     }
-}
-
-/**
-This returns the degree classification for a given gpa
-**/
-char * outputClassification(double gpa)
-{
-
-    char *x ;
-    if (gpa >= 3.25)
-    {
-        x = "First class Honours\t\t\t";
-
-    }
-    else if (gpa >= 3.00 && gpa < 3.25)
-    {
-        x = "Second class Honours, grade 1\t\t";
-
-    }
-    else if (gpa >= 2.50 && gpa < 3.00)
-    {
-        x = "Second class Honours, grade 2\t\t";
-
-    }
-    else if (gpa >= 2 && gpa < 2.50)
-    {
-        x = "Pass\t\t\t\t\t";
-
-    }
-    else
-    {
-        x ="Fail\t\t\t\t\t";
-    }
-    //printf("%s", x);
-    return x;
 }
 
 /**

@@ -2,22 +2,22 @@
 GPA results for all 10 students:
 
 	[Student 1]				[Student 2]				
-	GPA: 1.29				GPA: 1.40				
-	Fail						Fail						
+	GPA: 2.19				GPA: 2.35				
+	Pass						Pass						
 
 	[Student 3]				[Student 4]				
-	GPA: 2.58				GPA: 2.56				
-	Second class Honours, grade 2			Second class Honours, grade 2			
+	GPA: 2.65				GPA: 2.38				
+	Second class Honours, grade 2			Pass						
 
 	[Student 5]				[Student 6]				
-	GPA: 2.02				GPA: 3.02				
-	Pass						Second class Honours, grade 1			
+	GPA: 1.00				GPA: 2.04				
+	Fail						Pass						
 
 	[Student 7]				[Student 8]				
-	GPA: 2.46				GPA: 2.65				
+	GPA: 2.13				GPA: 2.69				
 	Pass						Second class Honours, grade 2			
 
 	[Student 9]				[Student 10]				
-	GPA: 2.02				GPA: 2.83				
-	Pass						Second class Honours, grade 2			
+	GPA: 2.00				GPA: 2.38				
+	Pass						Pass						
 
