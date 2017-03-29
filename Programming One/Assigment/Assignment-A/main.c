@@ -24,6 +24,9 @@ int main()
     return 0;
 }
 
+/**
+This reads the data from data.txt and stores it in the array studentGrades
+**/
 void loadIntoArray()
 {
 
@@ -46,6 +49,9 @@ void loadIntoArray()
     fclose(data);
 }
 
+/**
+This returns the grade point value multiplied by the difficulty for a given grade
+**/
 double getGradePointValue(int grade)
 {
 
@@ -83,11 +89,15 @@ double getGradePointValue(int grade)
     }
 }
 
+// This is the total credits going for the course
 int totalCredits()
 {
     return 5 * 12;
 }
 
+/**
+This calculates the gpas for each student and stores them in a separate array
+**/
 void calculateGpas(int studentGrades[][12])
 {
 
@@ -105,6 +115,9 @@ void calculateGpas(int studentGrades[][12])
     }
 }
 
+/**
+Outputs the gpas for each student to the console window in a nice format
+**/
 void outputGpas(double studentGpas[])
 {
 
@@ -140,6 +153,9 @@ void outputGpas(double studentGpas[])
     }
 }
 
+/**
+This returns the degree classification for a given gpa
+**/
 char * outputClassification(double gpa)
 {
 
@@ -172,6 +188,9 @@ char * outputClassification(double gpa)
     return x;
 }
 
+/**
+Outputs the gpas for each student to results.txt in a nice format
+**/
 void outputResultsFile(double studentGpas[])
 {
     FILE *results = fopen("results.txt", "w");
