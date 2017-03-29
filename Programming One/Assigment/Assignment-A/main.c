@@ -49,35 +49,35 @@ void loadIntoArray()
 double getGradePointValue(int grade)
 {
 
-    if(grade > 80)
+    if(grade >= 80)
     {
         return 4.00 * 5;
     }
-    else if(grade > 70 && grade < 80)
+    else if(grade >= 70 && grade < 80)
     {
         return 3.50 * 5;
     }
-    else if(grade > 60 && grade < 70)
+    else if(grade >= 60 && grade < 70)
     {
         return 3.00 * 5;
     }
-    else if(grade > 55 && grade < 60)
+    else if(grade >= 55 && grade < 60)
     {
         return 2.75 * 5;
     }
-    else if(grade > 50 && grade < 55)
+    else if(grade >= 50 && grade < 55)
     {
         return 2.50 * 5;
     }
-    else if(grade > 40 && grade < 50)
+    else if(grade >= 40 && grade < 50)
     {
         return 2.00 * 5;
     }
-    else if(grade > 35 && grade < 40)
+    else if(grade >= 35 && grade < 40)
     {
         return 1.50 * 5;
     }
-    else
+    else if(grade < 35)
     {
         return 0;
     }
@@ -122,12 +122,16 @@ void outputGpas(double studentGpas[])
             counter++;
         }
 
+        printf("\n\t");
+
         for (y = 0; y < 2; y++)
         {
             printf("GPA: %.2lf\t\t\t\t", studentGpas[start + y]);
         }
 
-        for (y = 1; y <= 2; y++)
+        printf("\n\t");
+
+        for (y = 0; y < 2; y++)
         {
             printf("%s", outputClassification(studentGpas[start + y]));
         }
@@ -140,22 +144,22 @@ char * outputClassification(double gpa)
 {
 
     char *x ;
-    if (gpa > 3.25)
+    if (gpa >= 3.25)
     {
         x = "First class Honours\t\t\t";
 
     }
-    else if (gpa > 3.00 && gpa < 3.25)
+    else if (gpa >= 3.00 && gpa < 3.25)
     {
         x = "Second class Honours, grade 1\t\t";
 
     }
-    else if (gpa > 2.50 && gpa < 3.00)
+    else if (gpa >= 2.50 && gpa < 3.00)
     {
         x = "Second class Honours, grade 2\t\t";
 
     }
-    else if (gpa > 2 && gpa < 2.50)
+    else if (gpa >= 2 && gpa < 2.50)
     {
         x = "Pass\t\t\t\t\t";
 
@@ -195,7 +199,7 @@ void outputResultsFile(double studentGpas[])
 
         fprintf(results, "\n\t");
 
-        for (y = 1; y <= 2; y++)
+        for (y = 0; y < 2; y++)
         {
             fprintf(results, "%s\t", outputClassification(studentGpas[start + y]));
         }
