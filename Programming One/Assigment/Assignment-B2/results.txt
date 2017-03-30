@@ -1,36 +1,36 @@
 
 The grade results for all ten students:
 
-	[Student 1:		F,	F,	B,	F,	B-,	C,	F,	B,	F,	C+,	C+,	B]
-	[Student 2:		F,	B,	A,	F,	A,	A,	F,	B+,	B+,	F,	F,	B]
-	[Student 3:		C+,	B,	C+,	C,	D,	F,	F,	A,	C+,	F,	A,	F]
-	[Student 4:		B-,	B+,	C,	B-,	D,	C+,	A,	F,	F,	B,	C+,	A]
-	[Student 5:		F,	C,	F,	A,	F,	A,	A,	C,	F,	B+,	A,	A]
-	[Student 6:		F,	B,	D,	A,	D,	C,	F,	A,	C,	A,	C+,	F]
-	[Student 7:		F,	B+,	A,	A,	A,	B-,	F,	F,	B,	F,	F,	F]
-	[Student 8:		F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F]
-	[Student 9:		F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F]
-	[Student 10:		F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F]
+	[Student 1:		C+,	C,	D,	B,	A,	F,	A,	A,	F,	C+,	F,	F]
+	[Student 2:		F,	C,	B+,	F,	C+,	F,	B,	D,	F,	F,	A,	D]
+	[Student 3:		A,	B+,	C,	A,	F,	B,	C,	B+,	F,	F,	D,	F]
+	[Student 4:		F,	F,	F,	F,	A,	D,	C,	D,	B-,	A,	F,	D]
+	[Student 5:		A,	F,	B,	A,	B-,	B-,	F,	F,	B,	F,	F,	B+]
+	[Student 6:		A,	F,	A,	A,	C+,	C+,	B,	C,	B-,	F,	F,	A]
+	[Student 7:		D,	C+,	F,	D,	C,	A,	F,	F,	F,	F,	A,	A]
+	[Student 8:		C+,	B+,	F,	A,	F,	F,	B,	B,	D,	B,	F,	A]
+	[Student 9:		B,	B,	D,	B+,	F,	B+,	D,	F,	F,	A,	C,	B+]
+	[Student 10:		A,	A,	F,	B,	C+,	F,	B,	F,	D,	F,	B,	D]
 
 GPA results for all 10 students:
 
 	[Student 1]				[Student 2]				
-	GPA: 1.56				GPA: 2.08				
-	Fail						Pass						
+	GPA: 1.96				GPA: 1.50				
+	Fail						Fail						
 
 	[Student 3]				[Student 4]				
-	GPA: 1.83				GPA: 2.38				
-	Fail						Pass						
+	GPA: 1.96				GPA: 1.44				
+	Fail						Fail						
 
 	[Student 5]				[Student 6]				
-	GPA: 2.29				GPA: 2.04				
-	Pass						Pass						
+	GPA: 1.92				GPA: 2.40				
+	Fail						Pass						
 
 	[Student 7]				[Student 8]				
-	GPA: 1.77				GPA: 0.00				
-	Fail						Fail						
+	GPA: 1.63				GPA: 2.04				
+	Fail						Pass						
 
 	[Student 9]				[Student 10]				
-	GPA: 0.00				GPA: 0.00				
-	Fail						Fail						
+	GPA: 2.13				GPA: 1.88				
+	Pass						Fail						
 

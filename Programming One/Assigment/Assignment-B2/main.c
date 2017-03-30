@@ -16,8 +16,8 @@ char * getGradeName(int grade);
 void outputGrades(int studentGrades[][12]);
 void outputResultsFile(double studentGpas[]);
 
-int studentGrades[10][12] = {};
-double studentGpas[10] = {};
+int studentGrades[120][12] = {};
+double studentGpas[120] = {};
 
 int sampleSize = 0, columns = 0;
 rows = 0;
@@ -66,24 +66,15 @@ This creates a new data.txt with completely random grade values
 void randomiseDataFile()
 {
 
-    int x, y, counter = 0;
+    int x, y;
     FILE* data = fopen("data.txt", "w");
     srand(time(NULL));
 
-    for (x = 0; x < 10; x++)
+    for (x = 0; x < sampleSize; x++)
     {
         for (y = 0; y < 12; y++)
         {
-            if(counter < sampleSize)
-            {
-                fprintf(data, "%d	", 1 + rand() % 100);
-            }
-            else
-            {
-                break;
-            }
-
-            counter++;
+            fprintf(data, "%d	", 1 + rand() % 100);
         }
         fprintf(data, "\n");
     }
@@ -101,6 +92,7 @@ void loadIntoArray()
 
     while( fscanf(data, "%d", &number) > 0 )
     {
+        //printf("%d\n", student);
         studentGrades[student][counter] = number;
 
         if(counter % 12 == 0 && counter != 0)
@@ -111,6 +103,7 @@ void loadIntoArray()
         }
         counter++;
     }
+
     fclose(data);
 }
 
@@ -119,7 +112,7 @@ This returns the grade point value multiplied by the difficulty for a given grad
 **/
 double getGradePointValue(int grade)
 {
-
+    printf("New grade: %d\n", grade);
     if(grade >= 80)
     {
         return 4.00 * 5;
@@ -168,7 +161,7 @@ void calculateGpas(int studentGrades[][12])
 
     int x, y;
 
-    for(x = 0; x < 10; x++)
+    for(x = 0; x < sampleSize; x++)
     {
         double gpa = 0;
 
@@ -211,28 +204,43 @@ char * outputClassification(double gpa)
     {
         x ="Fail\t\t\t\t\t";
     }
-    //printf("%s", x);
     return x;
 }
 
-char * getGradeName(int grade){
+char * getGradeName(int grade)
+{
 
     char *x;
-    if (grade >= 80 && grade <= 100){
+    if (grade >= 80 && grade <= 100)
+    {
         x = "A";
-    }else if (grade >= 70 && grade < 80){
+    }
+    else if (grade >= 70 && grade < 80)
+    {
         x = "B+";
-    }else if (grade >= 60 && grade < 70){
+    }
+    else if (grade >= 60 && grade < 70)
+    {
         x = "B";
-    }else if (grade >= 55 && grade < 60){
+    }
+    else if (grade >= 55 && grade < 60)
+    {
         x = "B-";
-    }else if (grade >= 50 && grade < 55){
+    }
+    else if (grade >= 50 && grade < 55)
+    {
         x = "C+";
-    }else if (grade >= 40 && grade < 50){
+    }
+    else if (grade >= 40 && grade < 50)
+    {
         x = "C";
-    }else if (grade >= 35 && grade < 40){
+    }
+    else if (grade >= 35 && grade < 40)
+    {
         x = "D";
-    }else{
+    }
+    else
+    {
         x = "F";
     }
     return x;
@@ -244,14 +252,15 @@ void outputGrades(int studentGrades[][12])
     int x, y;
 
     printf("\n\n");
-    for(x = 0; x < 10; x++)
+    for(x = 0; x < sampleSize; x++)
     {
         printf("\t[Student %d:\t", x + 1);
 
         for(y = 0; y < 12; y++)
         {
             printf(" %s", getGradeName(studentGrades[x][y]));
-            if(y != 11){
+            if(y != 11)
+            {
                 printf(",");
             }
         }
@@ -268,7 +277,7 @@ void outputGpas(double studentGpas[])
     int x, y, counter = 0;
     printf("\nGPA results for all 10 students:\n\n");
 
-    for (x = 0; x < 5; x++)
+    for (x = 0; x < sampleSize/2; x++)
     {
         int start = x * 2;
         printf("\t");
@@ -318,12 +327,13 @@ void outputResultsFile(double studentGpas[])
     fprintf(results, "\nThe grade results for all ten students:\n\n");
     for(x = 0; x < 10; x++)
     {
-        fprintf(results, "\t[Student %d:\t", x + 1);
+        fprintf(results, "\t[Student %3d:\t", x + 1);
 
         for(y = 0; y < 12; y++)
         {
             fprintf(results, "\t%s", getGradeName(studentGrades[x][y]));
-            if(y != 11){
+            if(y != 11)
+            {
                 fprintf(results, ",");
             }
         }
