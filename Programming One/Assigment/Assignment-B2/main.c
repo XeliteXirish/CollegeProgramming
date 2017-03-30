@@ -52,7 +52,7 @@ This validates the sample size to make sure its between 80 and 120
 void validateData()
 {
 // Validates the data to make sure its between 80 and 120
-    if (!sampleSize > 80 && !sampleSize < 120)
+    if (!sampleSize >= 80 && !sampleSize <= 120)
     {
         printf("Please enter a number only between 80 and 120. Try again.\n");
         promptSampleSize();
