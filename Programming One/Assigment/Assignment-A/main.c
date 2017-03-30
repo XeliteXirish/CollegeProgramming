@@ -6,9 +6,11 @@
 void loadIntoArray();
 double getGradePointValue(int grade);
 void calculateGpas(int studentGrades[][12]);
-void outputGpas(double studentGpas[]);
 int totalCredits();
 char * outputClassification(double gpa);
+char * getGradeName(int grade);
+void outputGrades(int studentGrades[][12]);
+void outputGpas(double studentGpas[]);
 void outputResultsFile(double studentGpas[]);
 
 int studentGrades[10][12] = {};
@@ -18,6 +20,7 @@ int main()
 {
     loadIntoArray();
     calculateGpas(studentGrades);
+    outputGrades(studentGrades);
     outputGpas(studentGpas);
     outputResultsFile(studentGpas);
 
@@ -150,6 +153,50 @@ char * outputClassification(double gpa)
     return x;
 }
 
+char * getGradeName(int grade){
+
+    char *x;
+    if (grade >= 80 && grade <= 100){
+        x = "A";
+    }else if (grade >= 70 && grade < 80){
+        x = "B+";
+    }else if (grade >= 60 && grade < 70){
+        x = "B";
+    }else if (grade >= 55 && grade < 60){
+        x = "B-";
+    }else if (grade >= 50 && grade < 55){
+        x = "C+";
+    }else if (grade >= 40 && grade < 50){
+        x = "C";
+    }else if (grade >= 35 && grade < 40){
+        x = "D";
+    }else{
+        x = "F";
+    }
+    return x;
+}
+
+void outputGrades(int studentGrades[][12])
+{
+
+    int x, y;
+
+    printf("\nThe grade results for all ten students:\n\n");
+    for(x = 0; x < 10; x++)
+    {
+        printf("\t[Student %d:\t", x + 1);
+
+        for(y = 0; y < 12; y++)
+        {
+            printf(" %s", getGradeName(studentGrades[x][y]));
+            if(y != 11){
+                printf(",");
+            }
+        }
+        printf("]\n");
+    }
+}
+
 /**
 Outputs the gpas for each student to the console window in a nice format
 **/
@@ -196,6 +243,22 @@ void outputResultsFile(double studentGpas[])
     FILE *results = fopen("results.txt", "w");
 
     int x, y, counter = 0;
+
+    fprintf(results, "\nThe grade results for all ten students:\n\n");
+    for(x = 0; x < 10; x++)
+    {
+        fprintf(results, "\t[Student %d:\t", x + 1);
+
+        for(y = 0; y < 12; y++)
+        {
+            fprintf(results, "\t%s", getGradeName(studentGrades[x][y]));
+            if(y != 11){
+                fprintf(results, ",");
+            }
+        }
+        fprintf(results, "]\n");
+    }
+
     fprintf(results, "\nGPA results for all 10 students:\n\n");
 
     for (x = 0; x < 5; x++)
