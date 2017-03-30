@@ -112,7 +112,6 @@ This returns the grade point value multiplied by the difficulty for a given grad
 **/
 double getGradePointValue(int grade)
 {
-    printf("New grade: %d\n", grade);
     if(grade >= 80)
     {
         return 4.00 * 5;
@@ -254,7 +253,7 @@ void outputGrades(int studentGrades[][12])
     printf("\n\n");
     for(x = 0; x < sampleSize; x++)
     {
-        printf("\t[Student %d:\t", x + 1);
+        printf("\t[Student %3d:\t", x + 1);
 
         for(y = 0; y < 12; y++)
         {
