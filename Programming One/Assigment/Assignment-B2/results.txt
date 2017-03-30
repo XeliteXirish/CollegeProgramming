@@ -1,23 +1,36 @@
 
+The grade results for all ten students:
+
+	[Student 1:		F,	F,	B,	F,	B-,	C,	F,	B,	F,	C+,	C+,	B]
+	[Student 2:		F,	B,	A,	F,	A,	A,	F,	B+,	B+,	F,	F,	B]
+	[Student 3:		C+,	B,	C+,	C,	D,	F,	F,	A,	C+,	F,	A,	F]
+	[Student 4:		B-,	B+,	C,	B-,	D,	C+,	A,	F,	F,	B,	C+,	A]
+	[Student 5:		F,	C,	F,	A,	F,	A,	A,	C,	F,	B+,	A,	A]
+	[Student 6:		F,	B,	D,	A,	D,	C,	F,	A,	C,	A,	C+,	F]
+	[Student 7:		F,	B+,	A,	A,	A,	B-,	F,	F,	B,	F,	F,	F]
+	[Student 8:		F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F]
+	[Student 9:		F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F]
+	[Student 10:		F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F,	F]
+
 GPA results for all 10 students:
 
 	[Student 1]				[Student 2]				
-	GPA: 2.13				GPA: 2.54				
-	Pass						Second class Honours, grade 2			
+	GPA: 1.56				GPA: 2.08				
+	Fail						Pass						
 
 	[Student 3]				[Student 4]				
-	GPA: 1.67				GPA: 2.46				
+	GPA: 1.83				GPA: 2.38				
 	Fail						Pass						
 
 	[Student 5]				[Student 6]				
-	GPA: 2.17				GPA: 1.29				
-	Pass						Fail						
+	GPA: 2.29				GPA: 2.04				
+	Pass						Pass						
 
 	[Student 7]				[Student 8]				
-	GPA: 1.56				GPA: 1.63				
+	GPA: 1.77				GPA: 0.00				
 	Fail						Fail						
 
 	[Student 9]				[Student 10]				
-	GPA: 2.10				GPA: 2.83				
-	Pass						Second class Honours, grade 2			
+	GPA: 0.00				GPA: 0.00				
+	Fail						Fail						
 
