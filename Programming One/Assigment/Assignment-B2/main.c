@@ -323,8 +323,8 @@ void outputResultsFile(double studentGpas[])
 
     int x, y, counter = 0;
 
-    fprintf(results, "\nThe grade results for all ten students:\n\n");
-    for(x = 0; x < 10; x++)
+    fprintf(results, "\nThe grade results for all %d students:\n\n", sampleSize);
+    for(x = 0; x < sampleSize; x++)
     {
         fprintf(results, "\t[Student %3d:\t", x + 1);
 
@@ -339,9 +339,9 @@ void outputResultsFile(double studentGpas[])
         fprintf(results, "]\n");
     }
 
-    fprintf(results, "\nGPA results for all 10 students:\n\n");
+    fprintf(results, "\nGPA results for all %d students:\n\n", sampleSize);
 
-    for (x = 0; x < 5; x++)
+    for (x = 0; x < sampleSize/2; x++)
     {
         int start = x * 2;
         fprintf(results, "\t");
