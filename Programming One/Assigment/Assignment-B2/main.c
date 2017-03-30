@@ -228,7 +228,9 @@ void outputGpas(double studentGpas[])
 
         for (y = 0; y < 2; y++)
         {
+            if (studentGpas[start + y] != 0){
             printf("[Student %d]\t\t\t\t", counter + 1);
+            }
             counter++;
         }
 
@@ -236,14 +238,18 @@ void outputGpas(double studentGpas[])
 
         for (y = 0; y < 2; y++)
         {
+            if (studentGpas[start + y] != 0){
             printf("GPA: %.2lf\t\t\t\t", studentGpas[start + y]);
+            }
         }
 
         printf("\n\t");
 
         for (y = 0; y < 2; y++)
         {
+            if (studentGpas[start + y] != 0){
             printf("%s", outputClassification(studentGpas[start + y]));
+            }
         }
         printf("\n\n");
 
