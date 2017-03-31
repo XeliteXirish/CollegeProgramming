@@ -153,24 +153,40 @@ char * outputClassification(double gpa)
     return x;
 }
 
-char * getGradeName(int grade){
+char * getGradeName(int grade)
+{
 
     char *x;
-    if (grade >= 80 && grade <= 100){
+    if (grade >= 80 && grade <= 100)
+    {
         x = "A";
-    }else if (grade >= 70 && grade < 80){
+    }
+    else if (grade >= 70 && grade < 80)
+    {
         x = "B+";
-    }else if (grade >= 60 && grade < 70){
+    }
+    else if (grade >= 60 && grade < 70)
+    {
         x = "B";
-    }else if (grade >= 55 && grade < 60){
+    }
+    else if (grade >= 55 && grade < 60)
+    {
         x = "B-";
-    }else if (grade >= 50 && grade < 55){
+    }
+    else if (grade >= 50 && grade < 55)
+    {
         x = "C+";
-    }else if (grade >= 40 && grade < 50){
+    }
+    else if (grade >= 40 && grade < 50)
+    {
         x = "C";
-    }else if (grade >= 35 && grade < 40){
+    }
+    else if (grade >= 35 && grade < 40)
+    {
         x = "D";
-    }else{
+    }
+    else
+    {
         x = "F";
     }
     return x;
@@ -189,7 +205,8 @@ void outputGrades(int studentGrades[][12])
         for(y = 0; y < 12; y++)
         {
             printf(" %s", getGradeName(studentGrades[x][y]));
-            if(y != 11){
+            if(y != 11)
+            {
                 printf(",");
             }
         }
@@ -252,7 +269,8 @@ void outputResultsFile(double studentGpas[])
         for(y = 0; y < 12; y++)
         {
             fprintf(results, "\t%s", getGradeName(studentGrades[x][y]));
-            if(y != 11){
+            if(y != 11)
+            {
                 fprintf(results, ",");
             }
         }
