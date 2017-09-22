@@ -1,3 +1,11 @@
+/* ------------------------------------------------------------
+Program: main.c
+Programmer: Shaun O'Neill
+ID: B00098451
+Date: 22 September 2017
+Purpose: Prints some maths to the console
+------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

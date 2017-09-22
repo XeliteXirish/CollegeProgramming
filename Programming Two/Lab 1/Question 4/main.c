@@ -1,3 +1,11 @@
+/* ------------------------------------------------------------
+Program: main.c
+Programmer: Shaun O'Neill
+ID: B00098451
+Date: 22 September 2017
+Purpose: Create an array having 10 elements and output the values to an array
+------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
