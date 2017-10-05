@@ -1,14 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+voide runCode(int number);
+
 int main()
 {
     int number = 10;
 
-    while (number > 9 || number < 0){
+    while (number > 9 || number < 0)
+    {
         printf("Please enter a random number between 0 and 9: ");
         scanf("%d", &number);
     }
+
+    runCode(number);
+    return 0;
+}
+
+void runCode(int number)
+{
 
     printf("\nYou entered number: ");
 
@@ -36,5 +46,5 @@ int main()
     else if (number == 8) printf("ocho");
     else if (number == 9) printf("nueve");
     printf("\n\n");
-    return 0;
+
 }
