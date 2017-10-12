@@ -5,16 +5,18 @@ float largest(float *a, float *b);
 
 int main()
 {
-    float *num1, *num2, bigger = 0;
+    float *a, *b, num1, num2, bigger = 0;
+    a = &num1;
+    b = &num2;
 
-    while (bigger != &num1 || bigger != &num2) {
+    while (bigger != num1 || bigger != num2) {
         printf("\nPlease enter number one: ");
-        scanf("%f", num1);
+        scanf("%f", &num1);
 
         printf("\n\nPlease enter number two: ");
-        scanf("%f", num2);
+        scanf("%f", &num2);
 
-        bigger = largest(num1, num2);
+        bigger = largest(a, b);
     }
 
     printf("\nThe biggest number is: %f", bigger);
@@ -23,10 +25,10 @@ int main()
 }
 
 float largest(float *a, float *b){
-    if (&a > &b) return &a;
-    else if (&b > &a) return &a;
-    else if (&a == &b) {
+    if (*a > *b) return *a;
+    else if (*b > *a) return *a;
+    else if (*a == *b) {
         printf("\nSorry but you can't enter the same number twice, try again!");
-        return &a + 10
-    };
+        return *a + 10;
+    }
 }
