@@ -16,7 +16,7 @@ int main()
     printf("Please enter a value for Y: ");
     scanf("%d", &y);
 
-    printf("\nValue: %.d", check(x, y, n));
+    printf("\nValue: %d", check(x, y, n));
 
     return 0;
 }
