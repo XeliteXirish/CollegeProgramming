@@ -9,26 +9,32 @@ int main()
     a = &num1;
     b = &num2;
 
-    while (bigger != num1 || bigger != num2) {
+    while (1)
+    {
         printf("\nPlease enter number one: ");
         scanf("%f", &num1);
 
-        printf("\n\nPlease enter number two: ");
+        printf("Please enter number two: ");
         scanf("%f", &num2);
 
-        bigger = largest(a, b);
+        if(num1 == num2)
+        {
+            printf("\nSorry but you can't enter the same number twice!");
+        }
+        else
+        {
+            bigger = largest(a, b);
+            break;
+        }
     }
 
-    printf("\nThe biggest number is: %f", bigger);
+    printf("\nThe biggest number is: %.0f", bigger);
 
     return 0;
 }
 
-float largest(float *a, float *b){
+float largest(float *a, float *b)
+{
     if (*a > *b) return *a;
-    else if (*b > *a) return *a;
-    else if (*a == *b) {
-        printf("\nSorry but you can't enter the same number twice, try again!");
-        return *a + 10;
-    }
+    else if (*b > *a) return *b;
 }
