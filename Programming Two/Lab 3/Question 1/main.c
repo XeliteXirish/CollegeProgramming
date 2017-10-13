@@ -10,10 +10,10 @@ int main()
     printf("Please enter the base: ");
     scanf("%lf", &b);
 
-    printf("\nPlease enter the height: ");
+    printf("Please enter the height: ");
     scanf("%lf", &h);
 
-    printf("\n\nThe area is %.2lf", triangle_area(b, h));
+    printf("\nThe area is %.2lf", triangle_area(b, h));
 
     return 0;
 }

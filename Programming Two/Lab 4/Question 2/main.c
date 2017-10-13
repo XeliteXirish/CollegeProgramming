@@ -17,7 +17,7 @@ int main()
 
     swapNums(&num1, &num2);
 
-    printf("\n(Swapped) You entered values %.2lf and %.2lf\n", num1, num2);
+    printf("(Swapped) You entered values %.2lf and %.2lf\n", num1, num2);
     return 0;
 }
 

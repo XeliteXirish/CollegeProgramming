@@ -5,9 +5,7 @@ float largest(float *a, float *b);
 
 int main()
 {
-    float *a, *b, num1, num2, bigger = 0;
-    a = &num1;
-    b = &num2;
+    float num1, num2, bigger = 0;
 
     while (1)
     {
@@ -23,7 +21,7 @@ int main()
         }
         else
         {
-            bigger = largest(a, b);
+            bigger = largest(&num1, &num2);
             break;
         }
     }
