@@ -11,7 +11,7 @@ Program:    Reading matrices from "inputf.txt" file and multiply the matrices.
 
 int main()
 {
-    FILE *input1, *input2, *output; // pointer to file
+    FILE *input, *output; // pointer to file
 
     int matrix1[100][100] = {};
     int matrix2[100][100] = {};
@@ -53,40 +53,32 @@ int main()
         scanf("%d", &c2);
     }
 
-    input1 = fopen("input2.txt","r");
+    input = fopen("input.txt","r");
 
-    printf("\n-MATRIX A-\n");
 
 //getting the values for first matrix
-    for(x=0; x<r1; x++)
-    {
+    printf("\n-MATRIX A-\n");
+    for(x=0; x<r1; x++){
         for(y=0; y<c1; y++)
         {
-            fscanf(input1,"%d",&matrix1[x][y]);
+            fscanf(input,"%d",&matrix1[x][y]);
             printf(" %d ",matrix1[x][y]);
         }
         printf("\n\n");
     }
 
-    fclose(input1);
-
-    input2 = fopen("input1.txt", "r");
-
-
 //Getting the values for second matrix
     printf("\n-MATRIX B-\n");
-
-    for(x=0; x<r2; x++)
-    {
+    for (x = 12; x < (r2 + 12); x++) {
         for(y=0; y<c2; y++)
         {
-            fscanf(input2, "%d", &matrix2[x][y]);
-            printf(" %d ", matrix2[x][y]);
+            fscanf(input, "%d", &matrix2[x-12][y]);
+            printf(" %d ", matrix2[x-12][y]);
         }
         printf("\n\n");
     }
 
-    fclose(input2);
+    fclose(input);
 
 //Multiplication of First and Second Matrix
     for(x=0; x<r1; ++x)
@@ -102,7 +94,7 @@ int main()
     }
 
 //Displaying the result of multiplication of First and Second Matrix
-    printf("Matrix C = Matrix A * Matrix B\n\n");
+    printf("Matrix C = Matrix A * Matrix B\n\n\n");
 
     for(x = 0; x < r1; ++x)
     {
