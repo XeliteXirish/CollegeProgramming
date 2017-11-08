@@ -23,13 +23,23 @@ int main()
 
 void modeOne() {
     int x, y;
+    FILE *input;
+
+    input = fopen("input.txt","r");
 
     // Load flows and distance into array
     for (x = 0; x < 5; x++){
         for (y = 0; y < 5; x++){
-
+            fscanf(input, "%d", &flows[x][y]);
         }
     }
+
+    for (x = 6; x < 6 + 5; x++){
+        for (y = 0; y < 5; y++){
+            fscanf(input, "%d", &distance[x][y]);
+        }
+    }
+    fclose(input); // Done reading files, close pointer
 }
 
 void modeTwo(){}
