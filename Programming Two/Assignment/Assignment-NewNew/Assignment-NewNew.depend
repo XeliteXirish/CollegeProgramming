@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1512396552 source:c:\users\shaun\onedrive\development\c\college programming\programming two\assignment\assignment-newnew\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

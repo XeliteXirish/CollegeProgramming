@@ -4,7 +4,7 @@
 void modeOne();
 void modeTwo();
 double calculateSeed(int machine[5]);
-int runCalc(int machine[5]);
+int runCalc(int machine[5], int runTimes);
 
 double distance[5][5]= {{0,28,33,22,20},
     {28,0,27,40,25},
@@ -22,6 +22,7 @@ double flow[5][5]= {{0,10,3,1,15},
 
 int location[5]= {1, 2, 3, 4, 5}; //locations
 int machine[5] = {1, 2, 3, 4, 5};
+int runCounter = 0;
 
 
 int main()
@@ -72,11 +73,15 @@ void modeOne()
 
 void modeTwo()
 {
-    int runOne = -1, runTwo = -2;
-    while (runOne != runTwo)
-    {
-        runOne = runCalc(machine);
-        runTwo = runCalc(machine);
+    int runOne = 0, runTwo = 0;
+    runOne = runCalc(machine, 1);
+
+    printf("\nStarting seed: %d\n", runOne);
+    while (runOne > runTwo || runTwo == 0){
+
+    if(runTwo < runOne && runTwo != 0) runOne = runTwo;
+
+        runTwo = runCalc(machine, 10);
     }
 
 
@@ -84,35 +89,43 @@ void modeTwo()
 
 }
 
-int runCalc (int *machine)
+int runCalc (int *machine, int runTimes)
 {
     int x, y, seed, lowestSeed = 9999999; // So we can keep track of the previous found lowest
-    for (x = 0; x < 12; x++)
+
+    for (x = 0; x < runTimes; x++)
     {
         randomiseMachine(machine);
         seed = calculateSeed(machine);
 
         if (seed < lowestSeed)
         {
-            printf("Found new lowest combination (");
+            lowestSeed = seed;
+            printf("%d )New lowest seed found (", runCounter);
             for (y = 0; y < 5; y++) printf("%d ", machine[y]);
             printf(") Seed: %d\n", seed);
-
-            lowestSeed = seed;
         }
+            runCounter++;
     }
     return lowestSeed;
 }
 
 void randomiseMachine(int *currentMachineCode, int counter)
 {
-    int x, j, temp;
-    for (x = 0; x < 5; x++)
+    int x, i, count;
+    for (count = 0; count < 5; count++)
     {
-        j = (rand() % 5) + 1;
-        temp = *(currentMachineCode + x);
-        *(currentMachineCode + x) = *(currentMachineCode + j);
-        *(currentMachineCode + j) = temp;
+        machine[count] = rand() % 5 + 1;
+    }
+
+    while (i < 5)
+    {
+        int r = (rand() % 5) + 1;
+        for (x = 0; x < i; x++)
+        {
+            if (machine[x] == r) break;
+        }
+        if (x == i) machine[i++] = r;
     }
 }
 
@@ -133,3 +146,4 @@ double calculateSeed(int machine[5])
         distance[location[1]-1][location[4]-1]*flow[machine[1]-1][machine[4]-1];
     return seed;
 }
+
