@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 void swap (int *x, int *y);
-unsigned long long nfact (size_t n);
-unsigned long long pnk (size_t n, size_t k);
+ int nfact (size_t n);
+ int pnk (size_t n, size_t k);
 void permute (int *a, size_t i, size_t n);
 void prnarray (int *a, size_t sz);
 
@@ -28,9 +28,9 @@ void swap (int *x, int *y)
 }
 
 /* calculate n factorial */
-unsigned long long nfact (size_t n)
+ int nfact (size_t n)
 {   if (n <= 0) return 1;
-    unsigned long long s = n;
+     int s = n;
 
     while (--n) s *= n;
 
@@ -38,7 +38,7 @@ unsigned long long nfact (size_t n)
 }
 
 /* calculate possible permutations */
-unsigned long long pnk (size_t n, size_t k)
+ int pnk (size_t n, size_t k)
 {   size_t d = (k < n ) ? n - k : 1;
     return nfact (n) / nfact (d);
 }
