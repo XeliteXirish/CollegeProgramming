@@ -1,90 +1,63 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
+void swap (int *x, int *y);
+unsigned long long nfact (size_t n);
+unsigned long long pnk (size_t n, size_t k);
+void permute (int *a, size_t i, size_t n);
+void prnarray (int *a, size_t sz);
 
-void swap_2_elements(int *m)
-{
-  int i1; // random index 1
-  int i2; // random index 2
-  int v1; // value under undex i1
-  int v2; // value under undex i2
+int main (void) {
 
-  while(1)
-  {
-      i1 = rand()%5;
-      i2 = rand()%5;
+    int array[] = {1, 2, 3, 4, 5};
+    size_t sz = sizeof array/sizeof *array;
 
-      if (i1!=i2) break;
-  }
+    /* permute the array of numbers */
+    printf (" permutations:\n\n");
+    permute (array, 0, sz);
 
-  v1 = m[i1];
-  v2 = m[i2];
-
-  m[i1] = v2;
-  m[i2] = v1;
+    return 0;
 }
 
-void swap_2_elements_n_times(int *m, int ntimes)
-{
-  int i;
-
-  for(i=0; i < ntimes; i++)
-    swap_2_elements(m);
+/* Function to swap values at two pointers */
+void swap (int *x, int *y)
+{   int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
 }
 
-// print table
-void print_machine(int *m)
-{
-    int i;
-    for(i=0; i<5; i++)
-      printf(" i=%i ", m[i]);
+/* calculate n factorial */
+unsigned long long nfact (size_t n)
+{   if (n <= 0) return 1;
+    unsigned long long s = n;
 
-      printf("\n");
+    while (--n) s *= n;
+
+    return s;
 }
 
-void remember_last_array(int *m1, int *m2)
-{
-    int i;
-    for(i=0; i<5; i++)
-         m1[i] = m2[i];
+/* calculate possible permutations */
+unsigned long long pnk (size_t n, size_t k)
+{   size_t d = (k < n ) ? n - k : 1;
+    return nfact (n) / nfact (d);
 }
 
-int are_arrays_same(int *m1, int *m2)
-{
-   int i;
-
-   for(i=0; i<5; i++)
-   {
-         if(m1[i] != m2[i])
-         return 0; // no
-   }
-
-    return 1; // yes
+/* permute integer array for elements 'i' through 'n' */
+void permute (int *a, size_t i, size_t n)
+{   size_t j;
+    if (i == n)
+        prnarray (a, n);
+    else
+        for (j = i; j < n; j++) {
+            swap ((a+i), (a+j));
+            permute (a, i+1, n);
+            swap ((a+i), (a+j));  // backtrack
+        }
 }
 
-int main()
- {
-  int i;
-  int machine1[5] = {1, 2, 3, 4, 5};
-  int machine2[5] = {1, 2, 3, 4, 5};
-  srand(time(NULL));
-
-  // Print 10 sets:
-  for(i = 0; i < 10; i++) // each next set is different than the previous one, but it may repeat later!
-  {
-    while(1)
-    {
-        swap_2_elements_n_times(machine2,10);   // swap two elements 6 times in the table machine
-        if( are_arrays_same(machine1, machine2) == 1 ) // compare with the previous set
-            continue; // sets are the same!
-
-        remember_last_array(machine1,machine2);
-        break; // set is different from previous one
-    }
-
-    print_machine(machine1);
-  }
-
-  return 0;
+void prnarray (int *a, size_t sz)
+{   size_t i;
+    for (i = 0; i < sz; i++) printf (" %2d", a[i]);
+    putchar ('\n');
 }

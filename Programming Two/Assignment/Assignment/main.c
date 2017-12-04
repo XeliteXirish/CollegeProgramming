@@ -5,6 +5,11 @@ void modeOne();
 void modeTwo();
 double calculateSeed(int machine[5]);
 int runCalc(int machine[5], int runTimes);
+void swap (int *x, int *y);
+unsigned long long nfact (size_t n);
+unsigned long long pnk (size_t n, size_t k);
+void permute (int *a, size_t i, size_t n);
+void prnarray (int *a, size_t sz);
 
 double distance[5][5]= {{0,28,33,22,20},
     {28,0,27,40,25},
@@ -21,7 +26,12 @@ double flow[5][5]= {{0,10,3,1,15},
 };
 
 int location[5]= {1, 2, 3, 4, 5}; //locations
-int machine[5] = {1, 2, 3, 4, 5};
+int machine[5] = {4, 5, 3, 1, 2};
+
+int permutations[120][5] = {};
+int permCounter = 0;
+int permUseCount = 0;
+
 int runCounter = 0;
 
 
@@ -39,6 +49,8 @@ int main()
         break;
     }
 
+    size_t size = sizeof machine/sizeof *machine;
+    permute(machine, 0, size);
     if (mode == 1) modeOne();
     else if (mode == 2) modeTwo();
 
@@ -113,20 +125,10 @@ int runCalc (int *machine, int runTimes)
 void randomiseMachine(int *currentMachineCode, int counter)
 {
     int x, i, count;
-    for (count = 0; count < 5; count++)
-    {
-        machine[count] = rand() % 5 + 1;
+    for (x = 0; x < 5; x++) {
+        machine[x] = permutations[permUseCount][x];
     }
-
-    while (i < 5)
-    {
-        int r = (rand() % 5) + 1;
-        for (x = 0; x < i; x++)
-        {
-            if (machine[x] == r) break;
-        }
-        if (x == i) machine[i++] = r;
-    }
+    permUseCount++;
 }
 
 /**
@@ -146,4 +148,48 @@ double calculateSeed(int machine[5])
         distance[location[1]-1][location[4]-1]*flow[machine[1]-1][machine[4]-1];
     return seed;
 }
+
+/* Function to swap values at two pointers */
+void swap (int *x, int *y)
+{   int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+/* calculate n factorial */
+unsigned long long nfact (size_t n)
+{   if (n <= 0) return 1;
+    unsigned long long s = n;
+
+    while (--n) s *= n;
+
+    return s;
+}
+
+/* calculate possible permutations */
+unsigned long long pnk (size_t n, size_t k)
+{   size_t d = (k < n ) ? n - k : 1;
+    return nfact (n) / nfact (d);
+}
+
+/* permute integer array for elements 'i' through 'n' */
+void permute (int *a, size_t i, size_t n)
+{   size_t j;
+    if (i == n)
+        prnarray (a, n);
+    else
+        for (j = i; j < n; j++) {
+            swap ((a+i), (a+j));
+            permute (a, i+1, n);
+            swap ((a+i), (a+j));  // backtrack
+        }
+}
+
+void prnarray (int *a, size_t sz)
+{   size_t i;
+    for (i = 0; i < sz; i++) permutations[permCounter][i] = a[i];
+    permCounter++;
+}
+
 
