@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1512744307 source:c:\users\shaun\onedrive\development\c\college programming\programming two\lab 9\question 3 p2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"functions.h"
+
+1512743769 c:\users\shaun\onedrive\development\c\college programming\programming two\lab 9\question 3 p2\functions.h
+
