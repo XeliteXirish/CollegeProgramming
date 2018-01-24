@@ -24,7 +24,6 @@ int main()
     string friend_name, friend_gender;
     cin >> friend_name >> friend_gender;
 
-    cout << "\nYours sincerely, " << first_name << " " << last_name;
     cout << "\nDear " << recipient << ",\n";
     cout << "\tI would like to ask you to do catering at me " << age << " birthday party";
     cout << "My birthday is on the " << days << "/" << months << "/2018,\nhope you're not booked up that day! I'll miss you!";
@@ -37,6 +36,9 @@ int main()
 
     if (age < 18 && age > 12) cout << "\nSoft drinks only please!\n";
     else if (age < 12) cout << "\nCan we have a clown too?\n";
+
+
+    cout << "\nYours sincerely, " << first_name << " " << last_name << endl;
 
 
     return 0;
