@@ -33,7 +33,7 @@ int main()
     cout << "You have " << twoeuros << " 2-euro " << (twos > 1 ? "coins" : "coin") << endl;
 
     double sum = (ones * 0.01 + twos * 0.02 + fives * 0.05 + tens * 0.1 + twentys * 0.2 + fiftys * 0.5 + euros + twoeuros * 2);
-    cout << "\nTotal sum: " << sum << " euro!\n";
+    cout << "\nTotal sum: " << sum << " euro! : " << (sum * 100) << " cents!\n";
 
     return 0;
 }
