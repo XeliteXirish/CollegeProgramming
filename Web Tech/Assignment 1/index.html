@@ -5,23 +5,30 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/sidebar.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 
 
-<div class="sidenav">
+<div class="sidenav" id="sidenav">
+    <a class="closebtn" title="Close Nav Bar" onclick="closeNav()">&times;</a>
     <a class="active" href="#about">Home</a>
-    <a href="#services">Services</a>
+    <a class="in1" href="#services">Services</a>
     <a href="#clients">Clients</a>
     <a href="#contact">Contact</a>
 </div>
 
-<div class="main">
+<div class="main" id="mainContent">
     <div class="navbar">
-        <a><b>&bull; Welcome to the super awesome C tutorial website</b></a>
+        <a>
+            <span class="navButton" onclick="openNav()" id="navBtn" title="Open Nav Bar">&#9776;</span>
+            <b>&nbsp; Welcome to the super awesome C tutorial website</b></a>
     </div>
     <div class="content">
-        <h2>Sidebar</h2>
+        <h2 class="header">Sidebar</h2>
+        <hr/>
+
         <p>This sidebar is of full height (100%) and always shown.</p>
         <p>Scroll down the page to see the result.</p>
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
@@ -30,9 +37,9 @@
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
             concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
             Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+        <code>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
             concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</code>
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
             concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
             Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
