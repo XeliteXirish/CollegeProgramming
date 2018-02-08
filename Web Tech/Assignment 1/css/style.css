@@ -1,0 +1,30 @@
+
+body {margin: 0;}
+.navbar {
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+.navbar a {
+    float: left;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-bottom: 3px solid #1939d2;
+}
+
+.navbar a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.navbar a.active {
+    color: white;
+    background-color: #008CBA;
+}
