@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     background-color: #333;
-    overflow-x: hidden;
+    overflow: hidden;
     transition: 0.5s;
     padding-top: 71px;
 }
@@ -67,4 +67,38 @@
 
 .sidenav .in1 {
     text-indent: 30px;
+}
+
+.dropdown {
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    text-decoration: none;
+    font-size: 25px;
+    outline: none;
+    color: lightgrey;
+    padding: 6px 8px 6px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #008CBA;
+    min-width: 160px;
+    margin-left: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
