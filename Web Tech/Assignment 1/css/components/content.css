@@ -1,6 +1,11 @@
-.header {
+.title {
     font-weight: bold;
     margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 

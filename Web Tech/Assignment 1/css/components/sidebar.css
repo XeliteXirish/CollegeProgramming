@@ -2,13 +2,12 @@
     height: 100%;
     width: 240px;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     background-color: #333;
     overflow-x: hidden;
-    transition: width 0.5s;
-    padding-top: 60px;
+    transition: 0.5s;
+    padding-top: 71px;
 }
 
 .sidenav a {
@@ -22,7 +21,7 @@
 .sidenav a:hover:not(.closebtn) {
     background-color: #ddd;
     color: black;
-    border-bottom: 0.5px solid #008CBA;
+    border-bottom: 1px solid #008CBA;
 }
 
 .sidenav a:hover:not(.active .closebtn) {
@@ -34,12 +33,13 @@
     background-color: #008CBA;
 }
 
-.sidenav .closebtn {
+.closebtn {
     position: absolute;
-    top: 8px;
-    right: 25px;
+    top: 10px;
+    right: 10px;
     font-size: 36px;
     margin-left: 50px;
+    z-index: 2;
     cursor: pointer;
 }
 
@@ -47,10 +47,11 @@
     margin-left: 240px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
     background-color: white;
+    transition: 0.5s;
 }
 
 .content {
-    padding: 0 10px;
+    padding: 60px 10px;
     font-size: 20px;
 }
 

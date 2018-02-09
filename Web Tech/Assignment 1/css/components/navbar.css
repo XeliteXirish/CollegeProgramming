@@ -1,10 +1,12 @@
 .navbar {
     overflow: hidden;
     left: 0;
+    top: 0;
+    width: 100%;
+    position: fixed;
     background-color: #333;
-    z-index: 2;
     color: lightgrey;
-    border-bottom: 2px solid #0e97ba;
+    border-bottom: 3px solid #0e97ba;
 }
 
 .navbar a {
@@ -18,5 +20,4 @@
 .navbar .navButton {
     font-size: 30px;
     cursor: pointer;
-    display: none;
 }

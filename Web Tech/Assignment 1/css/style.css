@@ -4,6 +4,19 @@
 
 body {
     margin: 0;
+    font-family: 'Lato', serif;
+}
+
+footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 
