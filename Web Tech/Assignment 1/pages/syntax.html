@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Syntax - OOP Development</title>
+
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./../js/sidebar.js"></script>
+</head>
+<body>
+
+
+<div class="sidenav" id="sidenav">
+    <a href="./../index.html">Home</a>
+    <a class="active" href="./pages/syntax.html">Syntax</a>
+    <a href="#clients">Clients</a>
+    <div class="dropdown in1">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            <a>Test 1</a>
+            <a>Test 1</a>
+            <a>Test 1</a>
+        </div>
+    </div>
+    <a href="#contact">Contact</a>
+</div>
+
+<div class="main" id="mainContent">
+    <div class="navbar">
+        <a>
+            <span class="navButton" onclick="toggleNav()" id="navBtn" title="Toggle Navigation Bar">&#9776;</span>
+            <b class="titleText" id="titleText">&bull;&nbsp;Welcome to the super awesome Object Orientated Programming
+                tutorial website</b></a>
+    </div>
+    <div class="content">
+        <h2 class="title">Syntax</h2>
+        <h3 class="subtitle in1">C++ syntax is very similer to the syntax in C</h3>
+        <hr>
+
+        <h3 id="coreStructure">Core Program Structure:</h3>
+        <p>
+            When we consider a C++ program, it can be defined as a collection of objects that communicate
+            with eachother by calling each other's methods.
+
+            <ul class="list">
+                <li><b>Objects</b>: These have states and behaviour. <i>Example: A dog might be a specific breed and color</i></li>
+                <li><b>Class's</b>: These contain a group of Objects and Methods</li>
+                <li><b>Methods</b>: These are functions which are used to complete tasks</li>
+                <li><b>Variables</b>:  Values can be stored, changed and accessed using variables</li>
+            </ul>
+
+            <h4>Base Structure:</h4>
+            Let us look at some simple code that will print <i>Hello World</i> to the console
+            <div class="code">
+                int main() {<br>
+                    cout << "Hello World"; // prints Hello World to the console<br>
+                    return 0;<br>
+                }
+            </div>
+        </p>
+        <hr>
+        <h3 id="blockScoping">Semi-colons and block scoping</h3>
+        <p>
+            Like in C, in C++ the semicolon is used to terminate a statement. Which means that each individual statement
+            must be ended with a semicolon. <i>The compiler will throw an error if you forgot one!!</i>
+            <div class="code">
+                    x = y; // This one will complete first<br>
+                    y = y++; // This one will only run once the first statement has finished<br>
+                </div>
+                <i><b>Note: </b> This means multiple statements can be on a single line, as long as there is
+                    a semicolon seperating them.</i>
+        </p>
+        <hr>
+        <h3 id="keywords">Reserved Keywords</h3>
+        <p>The following list shows the most commonly used reserved keywords in C++.  These words must not be used as constant or
+            variable names.  You'll notice a lot of these are the same ones used in C++.
+            <b>TODO TODO TODO</b>>
+        </p>
+        <hr>
+        <h3 id="comments">Comments</h3>
+        <p>
+            Comments are used to help anyone that is reading the program source code. C++ supports both single-line
+            and block comments.  Every character inside a comment is ignored by the compiler.<br>
+            <i>Even code you enter will be ignored!</i>
+            
+        </p>
+    </div>
+</div>
+
+<footer>
+    ~ Created by <a href="https://www.shaunoneill.com">Shaun O'Neill</a> ~
+</footer>
+
+
+</body>
+</html>

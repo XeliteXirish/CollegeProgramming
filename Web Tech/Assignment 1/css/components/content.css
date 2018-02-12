@@ -12,6 +12,10 @@
     font-weight: 400;
 }
 
+h3::before {
+    content: '• '
+}
+
 .code {
     font-family: "Courier New", monospace;
     border-left: 6px solid #2196f3;
