@@ -18,6 +18,16 @@
 }
 
 .navbar .navButton {
+    margin-left: 80px;
     font-size: 30px;
     cursor: pointer;
+}
+
+.titleText {
+    color: white;
+    margin-left: 15px;
+    border-bottom: 3px solid #0e97ba;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
