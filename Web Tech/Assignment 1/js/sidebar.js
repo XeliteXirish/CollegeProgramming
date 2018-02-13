@@ -1,4 +1,4 @@
-let headerString = 'Welcome to the super awesome Object Orientated Programming tutorial website';
+let headerString = '• Welcome to the super awesome Object Orientated Programming tutorial website!';
 let headerStringLength = headerString.length;
 let navOpen = true;
 let interval;
