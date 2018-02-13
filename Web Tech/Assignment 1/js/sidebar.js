@@ -1,8 +1,9 @@
 let headerString = 'Welcome to the super awesome Object Orientated Programming tutorial website';
 let headerStringLength = headerString.length;
 let navOpen = true;
+let interval;
 
-let counter = 0;
+let counter = headerStringLength;
 
 function toggleNav() {
     console.log(`Nav currently open: ${navOpen}`)
@@ -17,14 +18,14 @@ function toggleNav() {
     }
 }
 
-/*$(document).ready(function () {
-    setInterval(animateHeader, 100);
-});*/
+$(document).ready(function () {
+    interval = setInterval(animateHeader, 20);
+});
 
 function animateHeader() {
-    if (counter === headerStringLength) counter = 0;
+    if (counter === 0) clearInterval(interval);
 
     $('#titleText').text(headerString.substring(0, headerStringLength - counter));
     console.log(headerString);
-    counter++;
+    counter--;
 }

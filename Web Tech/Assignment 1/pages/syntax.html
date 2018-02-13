@@ -14,8 +14,8 @@
 
 <div class="sidenav" id="sidenav">
     <a href="./../index.html">Home</a>
-    <a class="active" href="./pages/syntax.html">Syntax</a>
-    <a href="#clients">Clients</a>
+    <a class="active" href="./syntax.html">Syntax</a>
+    <a href="./arrays.html">Arrays</a>
     <div class="dropdown in1">
         <button class="dropbtn">Dropdown</button>
         <div class="dropdown-content">
@@ -71,6 +71,22 @@
                 </div>
                 <i><b>Note: </b> This means multiple statements can be on a single line, as long as there is
                     a semicolon seperating them.</i>
+            <br>
+            Scoping is the term used to describe the region that variables that have been declared
+            can be accessed.  There are two main types of variables, <b>local variables</b>
+            and <b>global variables</b>.<br>
+            Local variables that are declared inside of a funciton or other block are local variables.
+            These can only be referenced in the current block or a child block.<br>
+            Global variables are defined outside of all functions, <small>usually at the top of the class</small>.
+            These variables can be referenced anywhere in the program.
+            <br>
+            <b>Example: </b>
+            <div class="code">
+                int x = 23; // Global variable decleration<br>
+                int main() {<br>
+                    int g = 200; // Local variable decleration<br>
+                }<br>
+            </div>
         </p>
         <hr>
         <h3 id="keywords">Reserved Keywords</h3>
