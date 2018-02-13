@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1518544995 source:e:\development\c\college programming\object oriented programming (c++)\lab 3\main.cpp
+	<iostream>
+	<stdexcept>
+

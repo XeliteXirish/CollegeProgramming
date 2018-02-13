@@ -24,11 +24,11 @@ int main()
     while(currency != "exit") // Keep looping
     {
         cin >> amount >> currency; // Accept inputs
-        if (currency == "exit") break;
         cin.clear(); // Clear the input buffer
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         if (cin.fail()) // If the input failed, error and go back to the start of the loop
         {
+        if (currency == "exit") break;
             cout << "Please enter a valid amount and currency!" << endl;
             continue;
         }
