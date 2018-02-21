@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1519175232 source:e:\development\c\college programming\object oriented programming (c++)\lab 4\part 1\src\client.cpp
+	"lib.h"
+
+1519174874 e:\development\c\college programming\object oriented programming (c++)\lab 4\part 1\include\lib.h
+
+1519175112 source:e:\development\c\college programming\object oriented programming (c++)\lab 4\part 1\src\lib.cpp
+	"lib.h"
+	<iostream>
+
