@@ -1,3 +1,16 @@
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.headCon1 {
+    float: left;
+}
+
+.headCon2 {
+    margin-left: 80px;
+}
+
 .navbar {
     overflow: hidden;
     left: 0;
@@ -18,7 +31,6 @@
 }
 
 .navbar .navButton {
-    margin-left: 80px;
     font-size: 30px;
     cursor: pointer;
 }
@@ -28,6 +40,5 @@
     margin-left: 15px;
     border-bottom: 3px solid #0e97ba;
     text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    white-space: pre-wrap;
 }

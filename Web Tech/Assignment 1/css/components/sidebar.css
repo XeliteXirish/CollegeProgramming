@@ -7,7 +7,7 @@
     background-color: #333;
     overflow: hidden;
     transition: 0.5s;
-    padding-top: 71px;
+    padding-top: 86px;
 }
 
 .sidenav a {
@@ -51,7 +51,7 @@
 }
 
 .content {
-    padding: 60px 10px;
+    padding: 90px 10px;
     font-size: 20px;
 }
 
