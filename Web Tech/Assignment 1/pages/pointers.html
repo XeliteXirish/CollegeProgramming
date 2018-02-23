@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./../assets/logo.png">
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="./../js/sidebar.js"></script>
+    <script src="./../js/scrollButton.js"></script>
 </head>
 <body>
 
@@ -20,15 +21,7 @@
     <a href="./syntax.html">Syntax</a>
     <a href="./arrays.html">Arrays</a>
     <a class="active" href="./pointers.html">Pointers</a>
-    <div class="dropdown in1">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-            <a>Test 1</a>
-            <a>Test 1</a>
-            <a>Test 1</a>
-        </div>
-    </div>
-    <a href="#contact">Contact</a>
+    <a href="./loops.html">Loops</a>
 </div>
 
 <div class="main" id="mainContent">
@@ -81,6 +74,8 @@
         </ul>
     </div>
 </div>
+
+<button onclick="topFunction()" id="topButton" title="Go to top">^</button>
 
 <footer>
     ~ Created by <a href="https://www.shaunoneill.com">Shaun O'Neill</a> ~

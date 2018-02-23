@@ -12,6 +12,7 @@
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="./js/sidebar.js"></script>
+    <script src="./js/scrollButton.js"></script>
 </head>
 <body>
 
@@ -21,15 +22,7 @@
     <a href="./pages/syntax.html">Syntax</a>
     <a href="./pages/arrays.html">Arrays</a>
     <a href="./pages/pointers.html">Pointers</a>
-    <div class="dropdown in1">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-            <a>Test 1</a>
-            <a>Test 1</a>
-            <a>Test 1</a>
-        </div>
-    </div>
-    <a href="#contact">Contact</a>
+    <a href="./pages/loops.html">Loops</a>
 </div>
 
 <div class="main" id="mainContent">
@@ -45,49 +38,27 @@
         </a>
     </div>
     <div class="content">
-        <h2 class="title">Test Hi people</h2>
-        <h3 class="subtitle in1">Testing subtitle</h3>
+        <h2 class="title">Welcome to a C++ tutorial website!</h2>
+        <h3 class="subtitle in1">Choose a category along the left sidebar!</h3>
+        <hr>
+        <p>C++ is a statically typed, compiled, general-purpose, case-sensitive, 
+            free-form programming language that supports procedural, object-oriented, and generic programming.<br>
+            C++ is regarded as a middle-level language, as it comprises a combination of both high-level and low-level language features.
+        </p>
+
         <hr>
 
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p class="code">Some text to enable scrolling.. This text should be in a super awesome code block Cool.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p class="code blur">This will be even more super cool as it'll blur the code unless you hover over it. Thats
-            cool right?
-            Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
-            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
-            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <img src="https://www.shaunoneill.com/img/logo.png" class="image blur">
+        <h3>History</h3>
+        <p>
+            C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. 
+            C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX.<br>
+            C++ was developed by Bjarne Stroustrup starting in 1979 at Bell Labs in Murray Hill, New Jersey, as an enhancement to the C language and originally named C with Classes but later it was renamed C++ in 1983.
+        </p>
 
     </div>
 </div>
+
+<button onclick="topFunction()" id="topButton" title="Go to top">^</button>
 
 <footer>
     ~ Created by <a href="https://www.shaunoneill.com">Shaun O'Neill</a> ~

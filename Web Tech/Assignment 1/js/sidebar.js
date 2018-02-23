@@ -26,6 +26,5 @@ function animateHeader() {
     if (counter === 0) clearInterval(interval);
 
     $('#titleText').text(headerString.substring(0, headerStringLength - counter));
-    console.log(headerString);
     counter--;
 }
