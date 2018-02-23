@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Pointers - OOP Development</title>
@@ -13,74 +14,75 @@
     <script src="./../js/sidebar.js"></script>
     <script src="./../js/scrollButton.js"></script>
 </head>
+
 <body>
 
 
-<div class="sidenav" id="sidenav">
-    <a href="./../index.html">Home</a>
-    <a href="./syntax.html">Syntax</a>
-    <a href="./arrays.html">Arrays</a>
-    <a class="active" href="./pointers.html">Pointers</a>
-    <a href="./loops.html">Loops</a>
-</div>
-
-<div class="main" id="mainContent">
-    <div class="navbar">
-        <a class="headContainer">
-            <div class="headCon1">
-                <img class="logo" src="./../assets/logo.png"/>
-            </div>
-            <div class="headCon2">
-                <span class="navButton" onclick="toggleNav()" id="navBtn" title="Toggle Navigation Bar">&#9776;</span>
-                <b class="titleText" id="titleText"></b>
-            </div>
-        </a>
+    <div class="sidenav" id="sidenav">
+        <a href="./../index.html">Home</a>
+        <a href="./syntax.html">Syntax</a>
+        <a href="./arrays.html">Arrays</a>
+        <a class="active" href="./pointers.html">Pointers</a>
+        <a href="./loops.html">Loops</a>
     </div>
-    <div class="content">
-        <h2 class="title">Pointers</h2>
-        <h3 class="subtitle in1">Reference memory locations</h3>
-        <hr>
 
-        <h3 id="coreStructure">Operation:</h3>
-        <p>
-            Earlier on, variables have been explained to be locations in the computer memory that can be referenced.
-            For a C++ program, when a variable is declared, the memory needed to store its value is assigned a specific
-            memory location. These are then used if you are referencing or changing the value.
-        </p>
-        <hr>
-        <h3 id="address">Address operator (&)</h3>
-        <p>
-            The address of a variable can be obtained by preceding the name of a variable with an ampersand sign (&),
-            known as the address-of operator.
-            The actual address of a variable in memory cannot be known before runtime.
-            The variable that stores the address of another variable (like foo in the previous example) is what in C++
-            is called a pointer.
-            Pointers are a very powerful feature of the language that has many uses in lower level programming.
-        </p>
-        <hr>
-        <h3 id="dereference">Dereference operator (*)</h3>
-        <p>
-            As just seen, a variable which stores the address of another variable is called a pointer. Pointers are said
-            to "point to" the variable whose address they store.
+    <div class="main" id="mainContent">
+        <div class="navbar">
+            <a class="headContainer">
+                <div class="headCon1">
+                    <img class="logo" src="./../assets/logo.png" />
+                </div>
+                <div class="headCon2">
+                    <span class="navButton" onclick="toggleNav()" id="navBtn" title="Toggle Navigation Bar">&#9776;</span>
+                    <b class="titleText" id="titleText"></b>
+                </div>
+            </a>
+        </div>
+        <div class="content">
+            <h2 class="title">Pointers</h2>
+            <h3 class="subtitle in1">Reference memory locations</h3>
+            <hr>
 
-            An interesting property of pointers is that they can be used to access the variable they point to directly.
-            This is done by preceding the pointer name with the dereference operator (*).
-            The operator itself can be read as "value pointed to by".
-        </p>
-        The reference and dereference operators are thus complementary:
-        <ul>
-            <li><b>&</b> is the address-of operator, and can be read simply as "address of"</li>
-            <li><b>*</b> is the dereference operator, and can be read as "value pointed to by"</li>
-        </ul>
+            <h3 id="coreStructure">Operation:</h3>
+            <p>
+                Earlier on, variables have been explained to be locations in the computer memory that can be referenced. For a C++ program,
+                when a variable is declared, the memory needed to store its value is assigned a specific memory location.
+                These are then used if you are referencing or changing the value.
+            </p>
+            <hr>
+            <h3 id="address">Address operator (&)</h3>
+            <p>
+                The address of a variable can be obtained by preceding the name of a variable with an ampersand sign (&), known as the address-of
+                operator. The actual address of a variable in memory cannot be known before runtime. The variable that stores
+                the address of another variable (like foo in the previous example) is what in C++ is called a pointer. Pointers
+                are a very powerful feature of the language that has many uses in lower level programming.
+            </p>
+            <hr>
+            <h3 id="dereference">Dereference operator (*)</h3>
+            <p>
+                As just seen, a variable which stores the address of another variable is called a pointer. Pointers are said to "point to"
+                the variable whose address they store. An interesting property of pointers is that they can be used to access
+                the variable they point to directly. This is done by preceding the pointer name with the dereference operator
+                (*). The operator itself can be read as "value pointed to by".
+            </p>
+            The reference and dereference operators are thus complementary:
+            <ul>
+                <li>
+                    <b>&</b> is the address-of operator, and can be read simply as "address of"</li>
+                <li>
+                    <b>*</b> is the dereference operator, and can be read as "value pointed to by"</li>
+            </ul>
+        </div>
     </div>
-</div>
 
-<button onclick="topFunction()" id="topButton" title="Go to top">^</button>
+    <button onclick="topFunction()" id="topButton" title="Go to top">^</button>
 
-<footer>
-    ~ Created by <a href="https://www.shaunoneill.com">Shaun O'Neill</a> ~
-</footer>
+    <footer>
+        ~ Created by
+        <a href="https://www.shaunoneill.com">Shaun O'Neill</a> ~
+    </footer>
 
 
 </body>
+
 </html>

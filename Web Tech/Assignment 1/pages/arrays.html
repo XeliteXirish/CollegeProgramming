@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Syntax - OOP Development</title>
@@ -13,85 +14,93 @@
     <script src="./../js/sidebar.js"></script>
     <script src="./../js/scrollButton.js"></script>
 </head>
+
 <body>
 
 
-<div class="sidenav" id="sidenav">
-    <a href="./../index.html">Home</a>
-    <a href="./syntax.html">Syntax</a>
-    <a class="active" href="./arrays.html">Arrays</a>
-    <a href="./pointers.html">Pointers</a>
-    <a href="./loops.html">Loops</a>
-</div>
-
-<div class="main" id="mainContent">
-        <div class="navbar">
-                <a class="headContainer">
-                    <div class="headCon1">
-                        <img class="logo" src="./../assets/logo.png"/>
-                    </div>
-                    <div class="headCon2">
-                        <span class="navButton" onclick="toggleNav()" id="navBtn" title="Toggle Navigation Bar">&#9776;</span>
-                        <b class="titleText" id="titleText"></b>
-                    </div>
-                </a>
-            </div>
-    <div class="content">
-        <h2 class="title">Arrays</h2>
-        <h3 class="subtitle in1">Arrays are just a fancy term for lists!</h3>
-        <hr>
-
-        <h3 id="coreStructure">Core Structure:</h3>
-        <p>
-            An array is a series of elements which are of the same type.  Each element inside the array can be referenced
-            using its unique identifier.<br>
-            For example, 5 values of type <i>int</i> can be declared as an array without having to declare all
-            5 seperately.<br>
-            You can access the individual elements by their index in the array. <b>Note: </b> Arrays are 0 indexed,
-            meaning they start counting at <b>zero!</b>
-
-            <img class="image" src="./../assets/arrays1.png">
-        </p>
-        <hr>
-        <h3 id="init">Initializing Arrays</h3>
-        <p>
-            If you don't initialize an array with pre-defined values, it'll be created with un-initialized elements.
-            This means that none of the elements are set to a specific value.<br>
-            Elements can be provided when creating the array in order to initialize the array with the predefined values.
-            <div class="code">
-                int bar[5]; // Five random floating values<br>
-                int foo[5] = {10, 20, 30, 40, 50}; // Initializes with 5 values<br>
-            </div>
-        </p>
-        <hr>
-        <h3 id="referencing">Accessing the elements in an array</h3>
-        <p>
-            The values of any of the elements in an array can be accessed just like any other variable of the same type.
-            You reference the element using the following syntax:<br>
-            <div class="code">array_name[position_in_array];</div> <b>Remember, arrays are zero indexed!</b><br>
-            So for example, in the above example with 5 elements in an array, you would access the 3rd element using
-            <div class="code">
-                foo[2]; // 0, 1, 2
-            </div>
-        </p>
-        <hr>
-        <h3 id="multidim">Multidimensional Arrays</h3>
-        <p>A Multidimensional array can be simply described as an 'array of arrays'.  There is no different syntax
-            for accessing the element in the array, you just provide a second index!<br>
-            <div class="code">
-                int foo[5][10];
-            </div>
-
-        </p>
+    <div class="sidenav" id="sidenav">
+        <a href="./../index.html">Home</a>
+        <a href="./syntax.html">Syntax</a>
+        <a class="active" href="./arrays.html">Arrays</a>
+        <a href="./pointers.html">Pointers</a>
+        <a href="./loops.html">Loops</a>
     </div>
-</div>
 
-<button onclick="topFunction()" id="topButton" title="Go to top">^</button>
+    <div class="main" id="mainContent">
+        <div class="navbar">
+            <a class="headContainer">
+                <div class="headCon1">
+                    <img class="logo" src="./../assets/logo.png" />
+                </div>
+                <div class="headCon2">
+                    <span class="navButton" onclick="toggleNav()" id="navBtn" title="Toggle Navigation Bar">&#9776;</span>
+                    <b class="titleText" id="titleText"></b>
+                </div>
+            </a>
+        </div>
+        <div class="content">
+            <h2 class="title">Arrays</h2>
+            <h3 class="subtitle in1">Arrays are just a fancy term for lists!</h3>
+            <hr>
 
-<footer>
-    ~ Created by <a href="https://www.shaunoneill.com">Shaun O'Neill</a> ~
-</footer>
+            <h3 id="coreStructure">Core Structure:</h3>
+            <p>
+                An array is a series of elements which are of the same type. Each element inside the array can be referenced using its unique
+                identifier.
+                <br> For example, 5 values of type
+                <i>int</i> can be declared as an array without having to declare all 5 seperately.
+                <br> You can access the individual elements by their index in the array.
+                <b>Note: </b> Arrays are 0 indexed, meaning they start counting at
+                <b>zero!</b>
+
+                <img class="image" src="./../assets/arrays1.png">
+            </p>
+            <hr>
+            <h3 id="init">Initializing Arrays</h3>
+            <p>
+                If you don't initialize an array with pre-defined values, it'll be created with un-initialized elements. This means that
+                none of the elements are set to a specific value.
+                <br> Elements can be provided when creating the array in order to initialize the array with the predefined values.
+                <div class="code">
+                    int bar[5]; // Five random floating values
+                    <br> int foo[5] = {10, 20, 30, 40, 50}; // Initializes with 5 values
+                    <br>
+                </div>
+            </p>
+            <hr>
+            <h3 id="referencing">Accessing the elements in an array</h3>
+            <p>
+                The values of any of the elements in an array can be accessed just like any other variable of the same type. You reference
+                the element using the following syntax:
+                <br>
+                <div class="code">array_name[position_in_array];</div>
+                <b>Remember, arrays are zero indexed!</b>
+                <br> So for example, in the above example with 5 elements in an array, you would access the 3rd element using
+                <div class="code">
+                    foo[2]; // 0, 1, 2
+                </div>
+            </p>
+            <hr>
+            <h3 id="multidim">Multidimensional Arrays</h3>
+            <p>A Multidimensional array can be simply described as an 'array of arrays'. There is no different syntax for accessing
+                the element in the array, you just provide a second index!
+                <br>
+                <div class="code">
+                    int foo[5][10];
+                </div>
+
+            </p>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="topButton" title="Go to top">^</button>
+
+    <footer>
+        ~ Created by
+        <a href="https://www.shaunoneill.com">Shaun O'Neill</a> ~
+    </footer>
 
 
 </body>
+
 </html>

@@ -44,8 +44,10 @@
 }
 
 .main {
-    margin-left: 240px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
+    margin-left: 240px;
+    /* Same as the width of the sidenav */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
     background-color: white;
     transition: 0.5s;
 }
@@ -59,7 +61,6 @@
     .sidenav {
         padding-top: 15px;
     }
-
     .sidenav a {
         font-size: 18px;
     }

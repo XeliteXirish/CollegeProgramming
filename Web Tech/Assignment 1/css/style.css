@@ -1,7 +1,6 @@
 @import url("./components/navbar.css");
 @import url("./components/sidebar.css");
 @import url("./components/content.css");
-
 body {
     margin: 0;
     font-family: 'Lato', serif;
@@ -19,8 +18,3 @@ footer {
     transition: 0.5s;
     display: block;
 }
-
-
-
-
-

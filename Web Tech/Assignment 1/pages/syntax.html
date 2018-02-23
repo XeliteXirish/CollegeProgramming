@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Syntax - OOP Development</title>
@@ -13,22 +14,23 @@
     <script src="./../js/sidebar.js"></script>
     <script src="./../js/scrollButton.js"></script>
 </head>
+
 <body>
 
 
-<div class="sidenav" id="sidenav">
-    <a href="./../index.html">Home</a>
-    <a class="active" href="./syntax.html">Syntax</a>
-    <a href="./arrays.html">Arrays</a>
-    <a href="./pointers.html">Pointers</a>
-    <a href="./loops.html">Loops</a>
-</div>
+    <div class="sidenav" id="sidenav">
+        <a href="./../index.html">Home</a>
+        <a class="active" href="./syntax.html">Syntax</a>
+        <a href="./arrays.html">Arrays</a>
+        <a href="./pointers.html">Pointers</a>
+        <a href="./loops.html">Loops</a>
+    </div>
 
-<div class="main" id="mainContent">
+    <div class="main" id="mainContent">
         <div class="navbar">
             <a class="headContainer">
                 <div class="headCon1">
-                    <img class="logo" src="./../assets/logo.png"/>
+                    <img class="logo" src="./../assets/logo.png" />
                 </div>
                 <div class="headCon2">
                     <span class="navButton" onclick="toggleNav()" id="navBtn" title="Toggle Navigation Bar">&#9776;</span>
@@ -36,88 +38,105 @@
                 </div>
             </a>
         </div>
-    <div class="content">
-        <h2 class="title">Syntax</h2>
-        <h3 class="subtitle in1">C++ syntax is very similer to the syntax in C</h3>
-        <hr>
+        <div class="content">
+            <h2 class="title">Syntax</h2>
+            <h3 class="subtitle in1">C++ syntax is very similer to the syntax in C</h3>
+            <hr>
 
-        <h3 id="coreStructure">Core Program Structure:</h3>
-        <p>
-            When we consider a C++ program, it can be defined as a collection of objects that communicate
-            with eachother by calling each other's methods.
+            <h3 id="coreStructure">Core Program Structure:</h3>
+            <p>
+                When we consider a C++ program, it can be defined as a collection of objects that communicate with eachother by calling each
+                other's methods.
 
-            <ul class="list">
-                <li><b>Objects</b>: These have states and behaviour. <i>Example: A dog might be a specific breed and color</i></li>
-                <li><b>Class's</b>: These contain a group of Objects and Methods</li>
-                <li><b>Methods</b>: These are functions which are used to complete tasks</li>
-                <li><b>Variables</b>:  Values can be stored, changed and accessed using variables</li>
-            </ul>
+                <ul class="list">
+                    <li>
+                        <b>Objects</b>: These have states and behaviour.
+                        <i>Example: A dog might be a specific breed and color</i>
+                    </li>
+                    <li>
+                        <b>Class's</b>: These contain a group of Objects and Methods</li>
+                    <li>
+                        <b>Methods</b>: These are functions which are used to complete tasks</li>
+                    <li>
+                        <b>Variables</b>: Values can be stored, changed and accessed using variables</li>
+                </ul>
 
-            <h4>Base Structure:</h4>
-            Let us look at some simple code that will print <i>Hello World</i> to the console
-            <div class="code">
-                int main() {<br>
-                    cout << "Hello World"; // prints Hello World to the console<br>
-                    return 0;<br>
-                }
-            </div>
-        </p>
-        <hr>
-        <h3 id="blockScoping">Semi-colons and block scoping</h3>
-        <p>
-            Like in C, in C++ the semicolon is used to terminate a statement. Which means that each individual statement
-            must be ended with a semicolon. <i>The compiler will throw an error if you forgot one!!</i>
-            <div class="code">
-                    x = y; // This one will complete first<br>
-                    y = y++; // This one will only run once the first statement has finished<br>
+                <h4>Base Structure:</h4>
+                Let us look at some simple code that will print
+                <i>Hello World</i> to the console
+                <div class="code">
+                    int main() {
+                    <br> cout
+                    << "Hello World"; // prints Hello World to the console<br>
+                        return 0;
+                        <br> }
                 </div>
-                <i><b>Note: </b> This means multiple statements can be on a single line, as long as there is
-                    a semicolon seperating them.</i>
-            <br>
-            Scoping is the term used to describe the region that variables that have been declared
-            can be accessed.  There are two main types of variables, <b>local variables</b>
-            and <b>global variables</b>.<br>
-            Local variables that are declared inside of a funciton or other block are local variables.
-            These can only be referenced in the current block or a child block.<br>
-            Global variables are defined outside of all functions, <small>usually at the top of the class</small>.
-            These variables can be referenced anywhere in the program.
-            <br>
-            <b>Example: </b>
-            <div class="code">
-                int x = 23; // Global variable decleration<br>
-                int main() {<br>
-                    int g = 200; // Local variable decleration<br>
-                }<br>
-            </div>
-        </p>
-        <hr>
-        <h3 id="keywords">Reserved Keywords</h3>
-        <p>The following list shows the most commonly used reserved keywords in C++.  These words must not be used as constant or
-            variable names.  You'll notice a lot of these are the same ones used in C++.
-            <b>TODO TODO TODO</b>
-        </p>
-        <hr>
-        <h3 id="comments">Comments</h3>
-        <p>
-            Comments are used to help anyone that is reading the program source code. C++ supports both single-line
-            and block comments.  Every character inside a comment is ignored by the compiler.<br>
-            <i>Even code you enter will be ignored!</i>
-            <div class="code">
-                // This is a single line comment<br><br>
-                /**<br>
-                    This is a block comment, anything inside the comment block will be ignored<br>
-                **/
-            </div>
-        </p>
+            </p>
+            <hr>
+            <h3 id="blockScoping">Semi-colons and block scoping</h3>
+            <p>
+                Like in C, in C++ the semicolon is used to terminate a statement. Which means that each individual statement must be ended
+                with a semicolon.
+                <i>The compiler will throw an error if you forgot one!!</i>
+                <div class="code">
+                    x = y; // This one will complete first
+                    <br> y = y++; // This one will only run once the first statement has finished
+                    <br>
+                </div>
+                <i>
+                    <b>Note: </b> This means multiple statements can be on a single line, as long as there is a semicolon seperating
+                    them.</i>
+                <br> Scoping is the term used to describe the region that variables that have been declared can be accessed.
+                There are two main types of variables,
+                <b>local variables</b>
+                and
+                <b>global variables</b>.
+                <br> Local variables that are declared inside of a funciton or other block are local variables. These can only
+                be referenced in the current block or a child block.
+                <br> Global variables are defined outside of all functions,
+                <small>usually at the top of the class</small>. These variables can be referenced anywhere in the program.
+                <br>
+                <b>Example: </b>
+                <div class="code">
+                    int x = 23; // Global variable decleration
+                    <br> int main() {
+                    <br> int g = 200; // Local variable decleration
+                    <br> }
+                    <br>
+                </div>
+            </p>
+            <hr>
+            <h3 id="keywords">Reserved Keywords</h3>
+            <p>The following list shows the most commonly used reserved keywords in C++. These words must not be used as constant
+                or variable names. You'll notice a lot of these are the same ones used in C++.
+                <b>TODO TODO TODO</b>
+            </p>
+            <hr>
+            <h3 id="comments">Comments</h3>
+            <p>
+                Comments are used to help anyone that is reading the program source code. C++ supports both single-line and block comments.
+                Every character inside a comment is ignored by the compiler.
+                <br>
+                <i>Even code you enter will be ignored!</i>
+                <div class="code">
+                    // This is a single line comment
+                    <br>
+                    <br> /**
+                    <br> This is a block comment, anything inside the comment block will be ignored
+                    <br> **/
+                </div>
+            </p>
+        </div>
     </div>
-</div>
 
-<button onclick="topFunction()" id="topButton" title="Go to top">^</button>
+    <button onclick="topFunction()" id="topButton" title="Go to top">^</button>
 
-<footer>
-    ~ Created by <a href="https://www.shaunoneill.com">Shaun O'Neill</a> ~
-</footer>
+    <footer>
+        ~ Created by
+        <a href="https://www.shaunoneill.com">Shaun O'Neill</a> ~
+    </footer>
 
 
 </body>
+
 </html>
