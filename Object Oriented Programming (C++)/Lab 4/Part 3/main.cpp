@@ -1,5 +1,8 @@
 #include <iostream>
 
+/**
+    Namespaces in file but wouldnt make a difference if it was in a header
+**/
 namespace X {
     int var;
     void print() {
