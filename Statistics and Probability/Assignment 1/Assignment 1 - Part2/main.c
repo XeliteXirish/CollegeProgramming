@@ -17,7 +17,6 @@ int main()
     int amountValues = 6;
     double standardD, mean;
 
-
     // Set 1
     printf("Set 1:");
     printf("\n\tStandard Deviation: %.2lfmm", calStandardD(set1, amountValues));
@@ -84,18 +83,18 @@ double calHigherQuart(double values[], int amount) {
 double calMedian(double values[], int amount)
 {
     double temp;
-    int x, y;
+    int i, j;
     // the following two loops sort the array x in ascending order
-    for(x=0; x < amount - 1; x++)
+    for(i=0; i < amount - 1; i++)
     {
-        for(y=x+1; y < amount; y++)
+        for(j=i+1; j < amount; j++)
         {
-            if(values[y] < values[x])
+            if(values[j] < values[i])
             {
                 // swap elements
-                temp = values[x];
-                values[x] = values[y];
-                values[y] = temp;
+                temp = values[i];
+                values[i] = values[j];
+                values[j] = temp;
             }
         }
     }
