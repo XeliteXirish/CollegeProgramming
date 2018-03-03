@@ -14,9 +14,14 @@ double set3[] = {};
 
 int main()
 {
-    int amountValues = 6;
+    int amountValues = 6, x;
     double standardD, mean;
 
+    File *inputSet1;
+    inputSet1 = fopen("set1.txt", "r");
+    for (x = 0; x < 20; x++) {
+
+    }
 
     // Set 1
     printf("Set 1:");
