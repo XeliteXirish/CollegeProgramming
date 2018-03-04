@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1520188005 source:e:\development\c\college programming\statistics and probability\assignment 1\assignment 1 - part2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
