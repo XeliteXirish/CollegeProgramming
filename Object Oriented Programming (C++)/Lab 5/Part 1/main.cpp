@@ -3,13 +3,8 @@
 #include <algorithm>
 
 using namespace std;
-void readWords();
-void countWords();
-void outputValues();
 
-class WordCount
-{
-
+class WordCount {
 public:
     string word;
     int occ;
@@ -21,12 +16,18 @@ public:
 
     void printf()
     {
-        cout << word << "\t\t" << occ << endl;
+        cout << word << "\t\t Num:" << occ << endl;
     }
 };
 
+void readWords();
+void countWords();
+void outputValues();
+bool sortObjects(WordCount &w1, WordCount &w2);
+
 vector<WordCount> mywords;
 vector<string> words;
+vector<string> finishedWords;
 
 int main()
 {
@@ -44,27 +45,26 @@ void readWords()
     {
         words.push_back(temp) ;
     }
-    cout << "Finished" << endl;
+    cout << endl;
 }
 
 void countWords()
 {
-    vector<string> finishedWords;
-
     // Fetch initial word to test against
     for(vector<string>::const_iterator i = words.begin(); i != words.end(); ++i)
     {
         string tempWord = *i;
         int wordCount = 0;
 
-        // Count all of words in vectr
+        // Count all of words in vector
         for(vector<string>::const_iterator i = words.begin(); i != words.end(); ++i)
         {
             if (tempWord == *i) wordCount++;
         }
 
-
-        if (find(finishedWords.begin(), finishedWords.end(), tempWord) != finishedWords.end()){
+        // Only add the new object if the word hasn't been counted before
+        if (find(finishedWords.begin(), finishedWords.end(), tempWord) == finishedWords.end())
+        {
             WordCount newWord = WordCount(tempWord, wordCount);
             mywords.push_back(newWord);
         }
@@ -75,9 +75,18 @@ void countWords()
 
 void outputValues()
 {
+    // Sort
+    sort(mywords.begin(), mywords.end(), sortObjects);
+
+    // Output to terminal
     vector<WordCount>::iterator i;
     for (i = mywords.begin(); i != mywords.end(); ++i)
     {
-        i -> printf();
+        i -> printf(); // Calls printf function on the WordCount instance
     }
+}
+
+bool sortObjects (WordCount &w1, WordCount &w2)
+{
+    return w1.word < w2.word;
 }
