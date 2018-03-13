@@ -88,5 +88,5 @@ void outputValues()
 
 bool sortObjects (WordCount &w1, WordCount &w2)
 {
-    return w1.word < w2.word;
+    return w1.occ > w2.occ;
 }
