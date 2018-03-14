@@ -16,7 +16,7 @@ public:
 
     void print()
     {
-        cout << word << "\t\t\t Num:" << occ << endl;
+        cout << word << "\t\t\t\t\t\t\t\t Num:" << occ << endl;
     }
 };
 
