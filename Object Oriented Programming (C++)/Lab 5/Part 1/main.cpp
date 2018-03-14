@@ -14,9 +14,9 @@ public:
         occ = Occ;
     }
 
-    void printf()
+    void print()
     {
-        cout << word << "\t\t Num:" << occ << endl;
+        cout << word << "\t\t\t Num:" << occ << endl;
     }
 };
 
@@ -40,8 +40,8 @@ int main()
 void readWords()
 {
     string temp;
-    cout << "Enter names separated by space characters. Enter q when finished.\n";
-    while (cin >> temp && temp != "q")
+    cout << "Enter names separated by space characters. Enter * when finished.\n";
+    while (cin >> temp && temp != "*")
     {
         words.push_back(temp) ;
     }
@@ -82,7 +82,7 @@ void outputValues()
     vector<WordCount>::iterator i;
     for (i = mywords.begin(); i != mywords.end(); ++i)
     {
-        i -> printf(); // Calls printf function on the WordCount instance
+        i -> print(); // Calls printf function on the WordCount instance
     }
 }
 
