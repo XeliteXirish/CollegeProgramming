@@ -33,6 +33,9 @@ void fillVector() {
     inputFile.close();
 }
 
+/**
+    Returns the mean value of the tempStore vector
+**/
 double calculateMean() {
     double total = 0, items = 0;
     for(vector<double>::const_iterator i = tempStore.begin(); i != tempStore.end(); ++i) {
@@ -42,6 +45,9 @@ double calculateMean() {
     return total / items;
 }
 
+/**
+    Returns the median value of the tempStore vector
+**/
 double calculateMedian() {
     sort(tempStore.begin(), tempStore.end());
     if (tempStore.size() % 2 == 0) {

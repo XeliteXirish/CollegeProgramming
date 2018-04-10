@@ -30,12 +30,16 @@ void writeToFile(int time, double temp) {
     outputFile << time << "\t" << temp << endl;
 }
 
+/**
+    Returns the temperature at a given time in mins
+**/
 double getTempAtTimeMins(double time) {
     double c = 5; // Y point at X = 0
     double timeMins = (time / (TOTAL_HOURS * 60 / (TEMP_MAX - TEMP_MIN)));
     return (calculateSlope() * timeMins) - c;
 }
 
+// Calculates the slope of the given max and min
 double calculateSlope() {
     return ((TEMP_MAX - TEMP_MIN) / TOTAL_HOURS);
 }
