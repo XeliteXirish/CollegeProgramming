@@ -1,6 +1,5 @@
 <h1 align="center"><b>ℂ𝕠𝕝𝕝𝕖𝕘𝕖 ℙ𝕣𝕠𝕘𝕣𝕒𝕞𝕞𝕚𝕟𝕘</b></h1>
-<h5 align="center">
-Every programming lab for college programming.</h5>
+<h5 align="center">Every programming assignment I had to complete in college / uni.</h5>
 
 <br/>
 
