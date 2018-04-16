@@ -1,0 +1,12 @@
+.content {
+    margin-bottom: 70px;
+}
+
+.columns {
+    
+    display: block;
+}
+
+.column {
+    background: darkblue;
+}
