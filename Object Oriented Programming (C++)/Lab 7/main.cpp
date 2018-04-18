@@ -1,26 +1,17 @@
 #include "Simple_window.h"
 #include "Graph.h"
 
-void drawRect(Simple_window);
-void drawPoly(Simple_window);
-void drawName(Simple_window);
+using namespace Graph_lib;
 
 int main()
 {
-    using namespace Graph_lib;
     Simple_window win(Point(100, 100),600,400,"My Window");
 
-    drawPoly(win);
-
-    win.wait_for_button();
-}
-void drawRect(Simple_window win) {
+    // PolyGon and rect
     Graph_lib::Rectangle rect(Point(100, 50), 250, 150);
     rect.set_color(Color::red);
     win.attach(rect);
-}
 
-void drawPoly(Simple_window win) {
     Graph_lib::Polygon poly;
 
     poly.add(Point(200,150));
@@ -30,13 +21,31 @@ void drawPoly(Simple_window win) {
 
     poly.set_color(Color::white);
     win.attach(poly);
-}
 
-void drawName(Simple_window win) {
+    win.wait_for_button();
+    win.detach(poly);
 
-    Text name(Point(300, 150), "SON");
+    Text name(Point(150, 100), "Hello World!");
     name.set_font(Font::times_bold);
     name.set_font_size(20);
     name.set_color(Color::green);
     win.attach(name);
+    win.wait_for_button();
+
+    // Chess board
+    win.detach(name);
+    win.detach(rect);
+
+    int x, y;
+    for (x = 1; x <= 8; x++) {
+        for (y = 1; y <= 8; y++) {
+            Graph_lib::Rectangle rect(Point(100, 50), 250, 150);
+            rect.set_color(Color::red);
+            win.attach(rect);
+            //if ((x % 2 != 0) && (y % 2 == 0)) rect.set_color(Color:: white);
+            //else rect.set_color(Color::black);
+        }
+    }
+
+    win.wait_for_button();
 }

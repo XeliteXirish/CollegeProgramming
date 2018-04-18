@@ -1,33 +1,29 @@
 # depslib dependency file v1.0
-1523446670 source:c:\users\shaun\onedrive\development\c\college programming\object oriented programming (c++)\lab 7\main.cpp
-	"Simple_window.h"
-	"Graph.h"
-
-1362497628 source:c:\program files (x86)\codeblocks\share\pppgui\graph.cpp
+1362497628 source:e:\program files (x86)\codeblocks\share\pppgui\graph.cpp
 	<FL/Fl_GIF_Image.H>
 	<FL/Fl_JPEG_Image.H>
 	"Graph.h"
 
-1361892846 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_gif_image.h
+1361896446 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_gif_image.h
 	"Fl_Pixmap.H"
 
-1361892848 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_pixmap.h
+1361896448 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_pixmap.h
 	"Fl_Image.H"
 	"x.H"
 
-1361892846 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_image.h
+1361896446 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_image.h
 	"Enumerations.H"
 	<stdlib.h>
 
-1361892844 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\enumerations.h
+1361896444 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\enumerations.h
 	"Fl_Export.H"
 	"fl_types.h"
 
-1361892846 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_export.h
+1361896446 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_export.h
 
-1361892850 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_types.h
+1361896450 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_types.h
 
-1361892850 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\x.h
+1361896450 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\x.h
 	"Enumerations.H"
 	"win32.H"
 	"mac.H"
@@ -37,48 +33,48 @@
 	"Fl_Window.H"
 	"Xutf8.h"
 
-1361892850 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\win32.h
+1361896450 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\win32.h
 	<windows.h>
 	<FL/Fl_Window.H>
 
-1361892850 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_window.h
+1361896450 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_window.h
 	"Fl_Group.H"
 
-1361892846 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_group.h
+1361896446 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_group.h
 	"Fl_Widget.H"
 
-1361892850 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_widget.h
+1361896450 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_widget.h
 	"Enumerations.H"
 	<stdint.h>
 	<stddef.h>
 
-1361892850 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\mac.h
+1361896450 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\mac.h
 	<FL/Fl_Widget.H>
 	<ApplicationServices/ApplicationServices.h>
 	"Fl_Window.H"
 
-1361892850 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\xutf8.h
+1361896450 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\xutf8.h
 	<X11/X.h>
 	<X11/Xlib.h>
 	<X11/Xlocale.h>
 	<X11/Xutil.h>
 
-1361892846 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_jpeg_image.h
+1361896446 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_jpeg_image.h
 	"Fl_Image.H"
 
-1362497662 c:\program files (x86)\codeblocks\share\pppgui\graph.h
+1362497662 e:\program files (x86)\codeblocks\share\pppgui\graph.h
 	<FL/fl_draw.H>
 	<FL/Fl_Image.H>
 	"Point.h"
 	"../std_lib_facilities.h"
 
-1361892850 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_draw.h
+1361896450 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_draw.h
 	<FL/x.H>
 	<FL/Enumerations.H>
 	<FL/Fl_Window.H>
 	<FL/Fl_Device.H>
 
-1361892846 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_device.h
+1361896446 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_device.h
 	<FL/x.H>
 	<FL/Fl_Plugin.H>
 	<FL/Fl_Image.H>
@@ -87,22 +83,22 @@
 	<FL/Fl_RGB_Image.H>
 	<stdlib.h>
 
-1361892848 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_plugin.h
+1361896448 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_plugin.h
 	"Fl_Preferences.H"
 
-1361892848 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_preferences.h
+1361896448 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_preferences.h
 	<stdio.h>
 	"Fl_Export.H"
 
-1361892844 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_bitmap.h
+1361896444 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_bitmap.h
 	"Fl_Image.H"
 
-1361892848 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_rgb_image.h
+1361896448 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_rgb_image.h
 	"Fl_Image.H"
 
-1362497706 c:\program files (x86)\codeblocks\share\pppgui\point.h
+1362497706 e:\program files (x86)\codeblocks\share\pppgui\point.h
 
-1523443330 c:\program files (x86)\codeblocks\share\std_lib_facilities.h
+1524092687 e:\program files (x86)\codeblocks\share\std_lib_facilities.h
 	<iostream>
 	<fstream>
 	<sstream>
@@ -117,24 +113,24 @@
 	<ext/hash_map>
 	<iomanip>
 
-1362497670 source:c:\program files (x86)\codeblocks\share\pppgui\gui.cpp
+1362497670 source:e:\program files (x86)\codeblocks\share\pppgui\gui.cpp
 	<FL/Fl.H>
 	<FL/Fl_Button.H>
 	<FL/Fl_Output.H>
 	"GUI.h"
 
-1361892844 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl.h
+1361896444 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl.h
 	<FL/Fl_Cairo.H>
 	"fl_utf8.h"
 	"Enumerations.H"
 
-1361892846 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_cairo.h
+1361896446 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_cairo.h
 	<FL/Fl_Export.H>
 	<cairo-xlib.h>
 	<cairo-win32.h>
 	<cairo-quartz.h>
 
-1361892850 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_utf8.h
+1361896450 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_utf8.h
 	"Fl_Export.H"
 	"fl_types.h"
 	<stdio.h>
@@ -153,36 +149,36 @@
 	<X11/Xlib.h>
 	<locale.h>
 
-1361892846 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_button.h
+1361896446 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_button.h
 	"Fl_Widget.H"
 
-1361892848 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_output.h
+1361896448 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_output.h
 	"Fl_Input.H"
 
-1361892846 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_input.h
+1361896446 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_input.h
 	"Fl_Input_.H"
 
-1361892846 c:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_input_.h
+1361896446 e:\program files (x86)\codeblocks\share\fltk-1.3.2\include\fl\fl_input_.h
 	"Fl_Widget.H"
 
-1362497674 c:\program files (x86)\codeblocks\share\pppgui\gui.h
+1362497674 e:\program files (x86)\codeblocks\share\pppgui\gui.h
 	"Window.h"
 	"Graph.h"
 
-1362497728 c:\program files (x86)\codeblocks\share\pppgui\window.h
+1362497728 e:\program files (x86)\codeblocks\share\pppgui\window.h
 	<FL/Fl.H>
 	<FL/Fl_Window.H>
 	"../std_lib_facilities.h"
 	"Point.h"
 
-1362497710 source:c:\program files (x86)\codeblocks\share\pppgui\simple_window.cpp
+1362497710 source:e:\program files (x86)\codeblocks\share\pppgui\simple_window.cpp
 	"Simple_window.h"
 
-1365434454 c:\program files (x86)\codeblocks\share\pppgui\simple_window.h
+1365434454 e:\program files (x86)\codeblocks\share\pppgui\simple_window.h
 	"GUI.h"
 	"Graph.h"
 
-1362497724 source:c:\program files (x86)\codeblocks\share\pppgui\window.cpp
+1362497724 source:e:\program files (x86)\codeblocks\share\pppgui\window.cpp
 	"Window.h"
 	"Graph.h"
 	"GUI.h"

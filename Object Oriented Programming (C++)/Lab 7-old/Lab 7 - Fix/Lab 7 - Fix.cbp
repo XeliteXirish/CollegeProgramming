@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Lab 7" />
+		<Option title="Lab 7 - Fix" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Lab 7" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Lab 7 - Fix" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Lab 7" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Lab 7 - Fix" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -43,10 +43,6 @@
 			<Add library="kernel32" />
 			<Add directory="E:/Program Files (x86)/CodeBlocks/share/fltk-1.3.2/lib" />
 		</Linker>
-		<Unit filename="../../../../../Program Files (x86)/CodeBlocks/share/pppgui/GUI.cpp" />
-		<Unit filename="../../../../../Program Files (x86)/CodeBlocks/share/pppgui/Graph.cpp" />
-		<Unit filename="../../../../../Program Files (x86)/CodeBlocks/share/pppgui/Simple_window.cpp" />
-		<Unit filename="../../../../../Program Files (x86)/CodeBlocks/share/pppgui/Window.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
