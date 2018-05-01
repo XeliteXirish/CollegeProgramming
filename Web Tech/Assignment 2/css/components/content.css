@@ -8,8 +8,8 @@
     box-sizing: border-box;
     padding: 10px;
     height: 300px; /* Should be removed. Only for demonstration */
-
-    border: 1px solid gray;
+    margin-bottom: 300px;
+    margin: 5px;
 }
 
 .columns {
@@ -29,4 +29,15 @@
     .column {
         width: 100%;
     }
+}
+
+.sensorInfo {
+    margin: 10px;
+    color: black;
+}
+
+.sensorInfo .sensorTitle {
+    color: dodgerblue;
+    text-decoration: none;
+    font-size: 25px;
 }
