@@ -4,15 +4,19 @@
 
 .column {
     float: left;
-    width: 33.33%;
+    width: 30%;
     box-sizing: border-box;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-    margin-bottom: 300px;
     margin: 5px;
+    height: 300px; /* Should be removed. Only for demonstration */
 }
 
 .columns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin-left: 15px;
     margin-right: 15px;
 }
@@ -32,12 +36,35 @@
 }
 
 .sensorInfo {
+    width: 100%;
     margin: 10px;
+    font-size: 1.2rem;
     color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .sensorInfo .sensorTitle {
     color: dodgerblue;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.2rem;
+}
+
+.about {
+    margin: 100px;
+}
+
+.aboutHeader {
+    color: dodgerblue;
+    text-decoration: none;
+    font-size: 3.2rem;
+
+}
+
+.aboutInfo {
+    color: black;
+    font-size: 1.6rem;
 }

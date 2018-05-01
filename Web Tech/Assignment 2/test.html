@@ -4,14 +4,12 @@
     <title>Home</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" ></script>
-    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
 
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="./css/style.css" />
 
-    <script src="./js/theme.js"></script>
 </head>
 
 <body>
@@ -23,7 +21,7 @@
     <div class="nav-list">
         <a href="" class="nav-item is-active">Home</a>
         <a href="" class="nav-item">About</a>
-        <button onclick=toggleTheme();>&#9776;</button>
+        <button onclick="toggleTheme();" title="Change theme!">&#9776;</button>
     </div>
 </div>
 
@@ -36,6 +34,8 @@
         <div class="columnRE" id="windChart"></div>
     </div>
 
+    <br><br>
+
     <div class="sensorInfo">
         <h1 class="sensorTitle">&bull;&nbsp;ITB Smart Campus Sensors</h1>
         <p>
@@ -45,7 +45,11 @@
 
 </div>
 
+<button onclick="topFunction()" id="topButton" title="Go to top">^</button>
+
 <script src="./js/charts.js"></script>
+<script src="./js/theme.js"></script>
+
 </body>
 
 </html>

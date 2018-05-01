@@ -1,0 +1,19 @@
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+#topButton:hover {
+    background-color: lightgrey;
+    color: dodgerblue;
+}

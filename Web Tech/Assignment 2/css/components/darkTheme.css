@@ -1,0 +1,20 @@
+body.is-dark {
+    background: #333333;
+}
+
+footer.is-dark {
+    background: #333333;
+    color: whitesmoke;
+}
+
+p.is-dark {
+    color: whitesmoke;
+}
+
+li.is-dark {
+    color: whitesmoke;
+}
+
+b.is-dark {
+    color: whitesmoke;
+}
