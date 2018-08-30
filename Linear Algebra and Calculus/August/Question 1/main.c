@@ -1,26 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define ITERATIONS 1000
 
-#define ITERATIONS 10
+// Returns approximate value of e^x
+// using sum of first n terms of Taylor Series
+double exponential(int itters, double x)
+{
+    int i; // Have to do this in case you're running an old version of c
+    double sum = 1.0f; // initialize sum of series
 
-float factorial(int n){
-    if (n==0) return 1;
-    else return n * factorial(n-1);
+    for (i = itters - 1; i > 0; --i ) {
+        sum = 1 + x * sum / i; // Calculates 1 + x + 1/2! + 1/3! etc
+    }
+
+    return sum; // Returns the answer
 }
 
 int main()
 {
-    float num, sum = 0;
+    double num, answer;
+    printf(" Shaun O'Neill:B00098451 - Press Ctrl+C to exit the program!\n");
 
-    printf("Please enter the input variable: ");
-    scanf("%f", &num);
+    while (1) {
+        printf("\nPlease enter the value for x: ");
+        scanf("%lf", &num); // Stores the value 'x' as variable num
 
-    int c, i;
-    for (i=0; i<= ITERATIONS; i++) {
-        c = (i % 2) == 0 ? 1 : -1;
-        sum = sum + (c * pow(num, 2 * i + 1)) / (factorial(2 * i + 1));
+        answer = exponential(ITERATIONS, num); // Calculates the exp for given itters, we use 1000
+
+        printf("\tThe value for f(x) at x = %.3lf is equal %.3f\n\n", num, answer);
     }
-
-    printf("The value is %f\n", sum);
     return 0;
 }
