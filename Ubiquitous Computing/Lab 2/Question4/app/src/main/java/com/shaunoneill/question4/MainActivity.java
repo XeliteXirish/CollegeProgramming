@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void InsertItem(String name, String items) {
-        database.execSQL("INSERT INTO list VALUES ('" + ')");
+        //database.execSQL("INSERT INTO list VALUES ('" + ')");
     }
 
 }
